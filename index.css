@@ -2,16 +2,18 @@ html,
 body {
     font-size: 20px;
     padding: 1rem;
-    gap: 2rem;
+}
+section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid black;
 }
 header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 2px solid black;
 }
 p {
     line-height: 2;
@@ -34,6 +36,10 @@ ul {
     flex-flow: row wrap;
     justify-content: space-around;
 }
+ul > li {
+    display: flex;
+    justify-content: center;
+}
 article {
     width: 40vw;
     display: flex;
@@ -41,7 +47,7 @@ article {
     gap: 1rem;
 }
 .preview {
-    aspect-ratio: 3/2.35;
+    aspect-ratio: 3/2.3;
     object-fit: cover;
     width: 40vw;
     border-radius: 1.5rem;
@@ -73,11 +79,23 @@ article > p {
     }
 }
 @media (max-width: 800px) {
+    html,
+    body {
+        padding: 0.5rem;
+    }
     article {
         width: 95%;
     }
     .preview {
         width: 95%;
     }
-
+}
+@media (max-width: 500px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 25px;
+    }
 }
