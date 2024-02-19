@@ -99,3 +99,19 @@ article > p {
         font-size: 25px;
     }
 }
+@media (prefers-color-scheme: dark) {
+   html,
+   body {
+        background-color: rgb(27, 27, 27);
+        color: white;
+   }
+   section {
+        border: 2px solid white;
+   }
+   .contact {
+        filter: brightness(1);
+   }
+   .preview {
+        box-shadow: 0.5rem 0.5rem rgb(75, 75, 75);
+   }
+  }
