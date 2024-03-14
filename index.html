@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <section>
+        <section id="intro">
             <header>
                 <img id="profile" src="assets/me.png" alt="A image of myself, Marie Yu"/>
                 <div id="about">
@@ -43,16 +43,43 @@
         </section>
         <main>
             <section>
-                <h2>Web Development</h2>
+                <h2>Blog</h2>
+                <hr>
+                <h3 style="text-align: center;">Coming Soon...</h3>
+            </section>
+            <section>
+                <h2>Web Dev + Data Viz</h2>
+                <hr>
             <ul>
                 <li>
                     <article>
-                        <a href="https://specials.michigandaily.com/2024/love-notes/" target="_blank" rel="noreferrer">
-                            <video class="preview" autoplay loop>
-                                <source src="assets/lovenotes.mp4" type="video/mp4">
-                            </video>
+                        <a href="https://michigan-daily-alt-text-tracker.pages.dev/" target="_blank" rel="noreferrer">
+                            <img class="preview" src="assets/alt-text-tracker.png" alt="Alternative text tracker">
                         </a>
                         <p>
+                            <a href="https://michigan-daily-alt-text-tracker.pages.dev" target="_blank" rel="noreferrer">
+                                <b>
+                                    Alt Text Tracker
+                                </b>
+                            </a> - 
+                            tracks The Michigan Daily's use of alternative text from published images.
+                            Made with SvelteKit, data visualizations created with d3, deployed with Cloudflare Pages.
+                        </p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="https://specials.michigandaily.com/2024/love-notes/" target="_blank" rel="noreferrer">
+                            <video id="vid" class="preview" type="video/mp4" autoplay playsinline loop muted>
+                                <source src="assets/lovenotes.mp4" type="video/mp4">
+                            </video>
+                            <script>
+                                console.log(document.getElementById('vid'))
+                                document.getElementById('vid').play();
+                            </script>
+                        </a>
+                        <p>
+                            <i>February, 2024</i><br>
                             <a href="https://specials.michigandaily.com/2024/love-notes/" target="_blank" rel="noreferrer">
                                 <b>
                                     Love Notes 2024
@@ -69,12 +96,13 @@
                             <img class="preview" src="assets/photogallery.png" alt="Photo Gallery">
                         </a>
                         <p>
+                            <i>January, 2024</i><br>
                             <a href="https://specials.michigandaily.com/photos/" target="_blank" rel="noreferrer">
                                 <b>
                                     Photo Gallery
                                 </b>
                             </a> - 
-                            templatized landing page for The Michigan Daily Photo Section. Frontend built with Astro, 
+                            templatized landing page. Frontend built with Astro, 
                             pulling from a PostgresQL database. Used a Custom WordPress API written in PHP.
                         </p>
                     </article>
@@ -90,9 +118,8 @@
                                     Avenu Web Portal
                                 </b>
                             </a> - 
-                            website version of the Avenu Mobile App, written in React using react-native-web, React Context 
-                            and Firebase to manage state. Currently supports event creation, user authentication, and 
-                            ticket purchase with the backend. To see an example event, 
+                            website version of the Avenu Mobile App, written in React using react-native-web
+                            and Firebase to manage state. To see an example event, 
                             <a href="https://avenuapp.co/event?eventId=GTTIzV9YsyDHgJJ3InkrFJKSbcnR" target="_blank" rel="noreferrer">click here</a>.
                         </p>
                     </article>
@@ -101,6 +128,7 @@
             </section>
             <section>
                 <h2>Mobile Development</h2>
+                <hr>
                 <ul>
                     <li>
                         <article>
@@ -129,8 +157,8 @@
                                         Avenu Mobile App
                                     </b>
                                 </a> - 
-                                an events app, integrated with Ticketmaster, AXS, and more APIs to provide the most diverse 
-                                event selection. Written in React Native, using Firebase for NoSQL database storage and user 
+                                an events app, integrated with Ticketmaster, AXS, etc to provide diverse 
+                                event selection. Written in React Native, using Firebase for storage and user 
                                 authentication. Uses AWS lambda functions for mobile notifications.
                             </p>
                         </article>
