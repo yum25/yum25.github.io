@@ -1,170 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>yum25.github.io</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <section id="intro">
-            <header>
-                <img id="profile" src="assets/me.png" alt="A image of myself, Marie Yu"/>
-                <div id="about">
-                    <h1>Hi, I'm Marie!</h1>
-                <p> 
-                    I'm a junior at University of Michigan 〽️ studying Computer Science 🤖👾. 
-                    I'm also the Senior Software Engineer and former Mobile Engineering Manager at 
-                    <a href="https://www.michigandaily.com" target="_blank" rel="noreferrer">The Michigan Daily</a> 🗞📰, 
-                    and a Fullstack Developer at <a href="Avenu" target="_blank" rel="noreferrer">Avenu</a>.<br aria-hidden="true" />
-                    I'm a big fan of developing for newsrooms, frontend, and fullstack development. 
-                    I believe in the ability of Computer Science as a means for artistic expression and to do good in the world. <br aria-hidden="true" />
-                    I also believe that Computer Science as a discipline should be accessible to all. To put this belief into practice, I teach coding for 
-                    <a href="http://www.sevenmileum.org/" target="_blank" rel="noreferrer">Seven Mile</a>.
-                </p>
-                <menu>
-                    <li>
-                        <a href="https://github.com/yum25" target="_blank" rel="noreferrer">
-                            <img class="contact" src="assets/github.png" alt="GitHub"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/marie-yu/" target="_blank" rel="noreferrer">
-                            <img class="contact" src="assets/linkedin.png" alt="LinkedIn"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="assets/Resume.pdf">
-                            <img class="contact" src="assets/file-filled.png" alt="Resume" />
-                        </a>
-                    </li>
-                </menu>
-                </div>
-            </header>
-        </section>
-        <main>
-            <section>
-                <h2>Blog</h2>
-                <hr>
-                <h3 style="text-align: center;">Coming Soon...</h3>
-            </section>
-            <section>
-                <h2>Web Dev + Data Viz</h2>
-                <hr>
-            <ul>
-                <li>
-                    <article>
-                        <a href="https://michigan-daily-alt-text-tracker.pages.dev/" target="_blank" rel="noreferrer">
-                            <img class="preview" src="assets/alt-text-tracker.png" alt="Alternative text tracker">
-                        </a>
-                        <p>
-                            <a href="https://michigan-daily-alt-text-tracker.pages.dev" target="_blank" rel="noreferrer">
-                                <b>
-                                    Alt Text Tracker
-                                </b>
-                            </a> - 
-                            tracks The Michigan Daily's use of alternative text from published images.
-                            Made with SvelteKit, data visualizations created with d3, deployed with Cloudflare Pages.
-                        </p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="https://specials.michigandaily.com/2024/love-notes/" target="_blank" rel="noreferrer">
-                            <video id="vid" class="preview" type="video/mp4" autoplay playsinline loop muted>
-                                <source src="assets/lovenotes.mp4" type="video/mp4">
-                            </video>
-                            <script>
-                                console.log(document.getElementById('vid'))
-                                document.getElementById('vid').play();
-                            </script>
-                        </a>
-                        <p>
-                            <i>February, 2024</i><br>
-                            <a href="https://specials.michigandaily.com/2024/love-notes/" target="_blank" rel="noreferrer">
-                                <b>
-                                    Love Notes 2024
-                                </b>
-                            </a> - 
-                            a specials site for The Michigan Daily Statement 
-                            Love Edition. Built with React, deployed with Amazon S3, emails sent with Amazon SES. 
-                        </p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="https://specials.michigandaily.com/photos/" target="_blank" rel="noreferrer">
-                            <img class="preview" src="assets/photogallery.png" alt="Photo Gallery">
-                        </a>
-                        <p>
-                            <i>January, 2024</i><br>
-                            <a href="https://specials.michigandaily.com/photos/" target="_blank" rel="noreferrer">
-                                <b>
-                                    Photo Gallery
-                                </b>
-                            </a> - 
-                            templatized landing page. Frontend built with Astro, 
-                            pulling from a PostgresQL database. Used a Custom WordPress API written in PHP.
-                        </p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="https://avenuapp.co/auth/home" target="_blank" rel="noreferrer">
-                            <img class="preview" src="assets/avenuweb.png" alt="Avenu Web Portal">
-                        </a>
-                        <p>
-                            <a href="https://avenuapp.co/auth/home" target="_blank" rel="noreferrer">
-                                <b>
-                                    Avenu Web Portal
-                                </b>
-                            </a> - 
-                            website version of the Avenu Mobile App, written in React using react-native-web
-                            and Firebase to manage state. To see an example event, 
-                            <a href="https://avenuapp.co/event?eventId=GTTIzV9YsyDHgJJ3InkrFJKSbcnR" target="_blank" rel="noreferrer">click here</a>.
-                        </p>
-                    </article>
-                </li>
-            </ul>
-            </section>
-            <section>
-                <h2>Mobile Development</h2>
-                <hr>
-                <ul>
-                    <li>
-                        <article>
-                            <a href="https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone" target="_blank" rel="noreferrer">
-                                <img class="preview" src="assets/tmd-mobile.png" alt="Avenu Web Portal">
-                            </a>
-                            <p>
-                                <a href="https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone" target="_blank" rel="noreferrer">
-                                    <b>
-                                        The Michigan Daily Mobile App
-                                    </b>
-                                </a> - 
-                                informs about issues and events surrounding the Ann Arbor and Washtenaw County and its community.
-                                Written in React Native Expo using Typescript, fetching stories from a Custom Wordpress API written in PHP. 
-                            </p>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <a href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983" target="_blank" rel="noreferrer">
-                                <img class="preview" src="assets/avenu-home.png" alt="Avenu Web Portal">
-                            </a>
-                            <p>
-                                <a href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983" target="_blank" rel="noreferrer">
-                                    <b>
-                                        Avenu Mobile App
-                                    </b>
-                                </a> - 
-                                an events app, integrated with Ticketmaster, AXS, etc to provide diverse 
-                                event selection. Written in React Native, using Firebase for storage and user 
-                                authentication. Uses AWS lambda functions for mobile notifications.
-                            </p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="public/site.webmanifest" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Marie Yu</title>
+  </head>
+  <body>
+    <section id="intro">
+      <header>
+        <img
+          id="profile"
+          src="assets/me.png"
+          alt="A image of myself, Marie Yu"
+        />
+        <div id="about">
+          <h1>Hi, I'm Marie!</h1>
+          <p>
+            I'm a junior at University of Michigan 〽️ studying Computer Science
+            🤖👾. I'm also the Senior Software Engineer and former Mobile
+            Engineering Manager at
+            <a
+              href="https://www.michigandaily.com"
+              target="_blank"
+              rel="noreferrer"
+              >The Michigan Daily</a
+            >
+            🗞📰, and a Fullstack Developer at
+            <a href="Avenu" target="_blank" rel="noreferrer">Avenu</a>.<br
+              aria-hidden="true"
+            />
+            I'm a big fan of developing for newsrooms, frontend, and fullstack
+            development. I believe in the ability of Computer Science as a means
+            for artistic expression and to do good in the world.
+            <br aria-hidden="true" />
+            I also believe that Computer Science as a discipline should be
+            accessible to all. To put this belief into practice, I teach coding
+            for
+            <a
+              href="http://www.sevenmileum.org/"
+              target="_blank"
+              rel="noreferrer"
+              >Seven Mile</a
+            >.
+          </p>
+          <menu>
+            <li>
+              <a
+                href="https://github.com/yum25"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img class="contact" src="assets/github.png" alt="GitHub" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/marie-yu/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img class="contact" src="assets/linkedin.png" alt="LinkedIn" />
+              </a>
+            </li>
+            <li>
+              <a href="assets/Resume.pdf">
+                <img
+                  class="contact"
+                  src="assets/file-filled.png"
+                  alt="Resume"
+                />
+              </a>
+            </li>
+          </menu>
+        </div>
+      </header>
+    </section>
+    <main>
+      <section>
+        <h2>Blog</h2>
+        <hr />
+        <h3 style="text-align: center">Coming Soon...</h3>
+      </section>
+      <section>
+        <h2>Web Dev + Data Viz</h2>
+        <hr />
+        <ul>
+          <li>
+            <article>
+              <a
+                href="https://michigan-daily-alt-text-tracker.pages.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/alt-text-tracker.png"
+                  alt="Alternative text tracker"
+                />
+              </a>
+              <p>
+                <i>March, 2024</i><br />
+                <a
+                  href="https://michigan-daily-alt-text-tracker.pages.dev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Alt Text Tracker </b>
+                </a>
+                - tracks The Michigan Daily's use of alternative text. Made with
+                SvelteKit, data visualizations created with d3, deployed with
+                Cloudflare Pages.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href="https://specials.michigandaily.com/2024/love-notes/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <video
+                  id="vid"
+                  class="preview"
+                  type="video/mp4"
+                  autoplay
+                  playsinline
+                  loop
+                  muted
+                >
+                  <source src="assets/lovenotes.mp4" type="video/mp4" />
+                </video>
+                <script>
+                  console.log(document.getElementById("vid"));
+                  document.getElementById("vid").play();
+                </script>
+              </a>
+              <p>
+                <i>February, 2024</i><br />
+                <a
+                  href="https://specials.michigandaily.com/2024/love-notes/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Love Notes 2024 </b>
+                </a>
+                - a specials site for The Michigan Daily Statement Love Edition.
+                Built with React, deployed with Amazon S3, emails sent with
+                Amazon SES.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href="https://specials.michigandaily.com/photos/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/photogallery.png"
+                  alt="Photo Gallery"
+                />
+              </a>
+              <p>
+                <i>January, 2024</i><br />
+                <a
+                  href="https://specials.michigandaily.com/photos/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Photo Gallery </b>
+                </a>
+                - templatized landing page. Frontend built with Astro, pulling
+                from a PostgresQL database. Used a Custom WordPress API written
+                in PHP.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href="https://avenuapp.co/auth/home"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/avenuweb.png"
+                  alt="Avenu Web Portal"
+                />
+              </a>
+              <p>
+                <a
+                  href="https://avenuapp.co/auth/home"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Avenu Web Portal </b>
+                </a>
+                - website version of the Avenu Mobile App, written in React
+                using react-native-web and Firebase to manage state. To see an
+                example event,
+                <a
+                  href="https://avenuapp.co/event?eventId=GTTIzV9YsyDHgJJ3InkrFJKSbcnR"
+                  target="_blank"
+                  rel="noreferrer"
+                  >click here</a
+                >.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Mobile Dev</h2>
+        <hr />
+        <ul>
+          <li>
+            <article>
+              <a
+                href="https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/tmd-mobile.png"
+                  alt="Avenu Web Portal"
+                />
+              </a>
+              <p>
+                <a
+                  href="https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> The Michigan Daily Mobile App </b>
+                </a>
+                - informs about issues and events surrounding the Ann Arbor and
+                Washtenaw County and its community. Written in React Native Expo
+                using Typescript, fetching stories from a Custom Wordpress API
+                written in PHP.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/avenu-home.png"
+                  alt="Avenu Web Portal"
+                />
+              </a>
+              <p>
+                <a
+                  href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Avenu Mobile App </b>
+                </a>
+                - an events app, integrated with Ticketmaster, AXS, etc to
+                provide diverse event selection. Written in React Native, using
+                Firebase for storage and user authentication. Uses AWS lambda
+                functions for mobile notifications.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>

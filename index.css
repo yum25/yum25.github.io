@@ -60,7 +60,6 @@ article {
 }
 article > p {
     line-height: 1.5;
-    text-align: center;
 }
 i {
    color: var(--var-secondary-text-color-theme);
