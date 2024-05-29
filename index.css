@@ -23,6 +23,9 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
 }
+h1 {
+    font-size: 35px;
+}
 p {
     line-height: 2;
 }
