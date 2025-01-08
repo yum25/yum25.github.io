@@ -30,7 +30,7 @@
         <img
           id="profile"
           src="assets/me.png"
-          alt="A image of myself, Marie Yu"
+          alt="An image of myself, Marie Yu"
         />
         <div id="about">
           <h1>Hi, I'm Marie!</h1>
@@ -39,15 +39,14 @@
             🤖👾.
           </p>
           <p>
-            I'm also the Senior Software Engineer and former Mobile Engineering
-            Manager at
+            I'm also a software engineer and data visualization developer at
             <a
               href="https://www.michigandaily.com"
               target="_blank"
               rel="noreferrer"
               >The Michigan Daily</a
             >
-            🗞📰, and a Fullstack Developer at
+            🗞📰, and a full-stack software engineer at
             <a href="Avenu" target="_blank" rel="noreferrer">Avenu</a>.<br
               aria-hidden="true"
             />
@@ -56,7 +55,8 @@
             I'm a big fan of developing for newsrooms, frontend, and fullstack
             development. I believe in the ability of Computer Science as a means
             for artistic expression and to do good in the world.
-            <br aria-hidden="true" />
+          </p>
+          <p>
             I also believe that Computer Science as a discipline should be
             accessible to all. To put this belief into practice, I teach coding
             for
@@ -106,7 +106,7 @@
         <h3 style="text-align: center">Coming Soon...</h3>
       </section> -->
       <section>
-        <h2>Project Favorites</h2>
+        <h2>Full-stack Engineering</h2>
         <hr />
         <ul>
           <li>
@@ -128,10 +128,11 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <b> The Michigan Daily Games </b>
+                  <b>The Michigan Daily Games</b>
                 </a>
-                - maintaining internal editorial tools for publishing crosswords, and developing two new games that
-                will be coming soon! Built with SvelteKit and Cloudflare.
+                <br />
+                A content management system with a user-facing crosswords player
+                and links player.
               </p>
             </article>
           </li>
@@ -156,10 +157,9 @@
                 >
                   <b> The Michigan Daily Mobile App </b>
                 </a>
-                - informs about issues and events surrounding the Ann Arbor and
-                Washtenaw County and its community. Written in React Native Expo
-                using Typescript, fetching stories from a Custom Wordpress API
-                written in PHP.
+                <br />
+                An iOS and Android app that displays The Michigan Daily's latest
+                news and stories.
               </p>
             </article>
           </li>
@@ -185,22 +185,108 @@
                 >
                   <b> Alt Text Tracker </b>
                 </a>
-                - tracks The Michigan Daily's use of alternative text. Made with
-                SvelteKit, data visualizations created with d3, deployed with
-                Cloudflare Pages.
+                <br />
+                Tracks The Michigan Daily's use of alternative text and audits
+                alternative text usage every day.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href="https://ol-samples.pages.dev"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/mapping-puzzle.png"
+                  alt="Detroit-Windsor Mapping Puzzle"
+                />
+              </a>
+              <p>
+                <a
+                  href="https://ol-samples.pages.dev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Detroit-Windsor Mapping Puzzle </b>
+                </a>
+                <br />
+                An interactive puzzle to test your knowledge of Detroit's
+                neighboring cities.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/avenu-home.png"
+                  alt="Avenu Mobile App"
+                />
+              </a>
+              <p>
+                <a
+                  href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Avenu Mobile App </b>
+                </a>
+                <br />
+                An iOS and Android app that connects users to local events,
+                concerts, and venues.
               </p>
             </article>
           </li>
         </ul>
       </section>
       <section>
-        <h2>More Web + Mobile Dev</h2>
+        <h2>Web Design</h2>
         <hr />
         <ul>
           <li>
             <article>
               <a
                 href="https://specials.michigandaily.com/2024/love-notes/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="preview"
+                  src="assets/opinion-elections.png"
+                  alt="Opinion Elections"
+                />
+                <script>
+                  console.log(document.getElementById("vid"));
+                  document.getElementById("vid").play();
+                </script>
+              </a>
+              <p>
+                <i>November, 2024</i><br />
+                <a
+                  href="https://specials.michigandaily.com/2024/love-notes/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b> Elections Commentary 2024 </b>
+                </a>
+                <br />
+                A website for The Michigan Daily Opinion endorsements,
+                editorials, commentary and data graphics
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a
+                href=" https://specials.michigandaily.com/2024/opinion-elections/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -223,15 +309,15 @@
               <p>
                 <i>February, 2024</i><br />
                 <a
-                  href="https://specials.michigandaily.com/2024/love-notes/"
+                  href=" https://specials.michigandaily.com/2024/opinion-elections/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <b> Love Notes 2024 </b>
                 </a>
-                - a specials site for The Michigan Daily Statement Love Edition.
-                Built with React, deployed with Amazon S3, emails sent with
-                Amazon SES.
+                <br />
+                A website for The Michigan Daily Statement Love Edition,
+                displaying love notes sent between students.
               </p>
             </article>
           </li>
@@ -257,70 +343,44 @@
                 >
                   <b> Photo Gallery </b>
                 </a>
-                - templatized landing page. Frontend built with Astro, pulling
-                from a PostgresQL database. Used a Custom WordPress API written
-                in PHP.
+                <br />
+                Templatized landing page that displays a portfolio of
+                photography.
               </p>
             </article>
           </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Data Visualization</h2>
+        <hr />
+        <ul>
           <li>
             <article>
               <a
-                href="https://avenuapp.co/auth/home"
+                href="https://sappho-in-data.pages.dev/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img
                   class="preview"
-                  src="assets/avenuweb.png"
-                  alt="Avenu Web Portal"
+                  src="assets/sappho.png"
+                  alt="Sappho in Data"
                 />
               </a>
               <p>
+                <i>December, 2024</i><br />
                 <a
-                  href="https://avenuapp.co/auth/home"
+                  href="https://sappho-in-data.pages.dev/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <b> Avenu Web Portal </b>
+                  <b> Sappho in Data </b>
                 </a>
-                - website version of the Avenu Mobile App, written in React
-                using react-native-web and Firebase to manage state. To see an
-                example event,
-                <a
-                  href="https://avenuapp.co/event?eventId=GTTIzV9YsyDHgJJ3InkrFJKSbcnR"
-                  target="_blank"
-                  rel="noreferrer"
-                  >click here</a
-                >.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/avenu-home.png"
-                  alt="Avenu Web Portal"
-                />
-              </a>
-              <p>
-                <a
-                  href="https://apps.apple.com/us/app/avenu-events-with-friends/id1487333983"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Avenu Mobile App </b>
-                </a>
-                - an events app, integrated with Ticketmaster, AXS, etc to
-                provide diverse event selection. Written in React Native, using
-                Firebase for storage and user authentication. Uses AWS lambda
-                functions for mobile notifications.
+                <br />
+                A fun visualization of Sappho's Fragments translated by Anne
+                Carson in <i>If Not, Winter</i>, categorized using a machine
+                learning algorithm.
               </p>
             </article>
           </li>
