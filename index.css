@@ -101,9 +101,6 @@ i {
   width: 60%;
 }
 @media (max-width: 1000px) {
-  #profile {
-    width: 60%;
-  }
   #about {
     width: 100%;
   }
@@ -118,7 +115,7 @@ i {
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --var-primary-color-theme: rgb(27, 27, 27);
         --var-secondary-color-theme: rgb(75, 75, 75);
@@ -128,4 +125,4 @@ i {
    .contact {
         filter: brightness(1);
    }
-  } */
+  }
