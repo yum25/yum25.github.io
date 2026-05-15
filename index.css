@@ -1,7 +1,7 @@
 :root {
   --var-primary-color-theme: rgb(255, 255, 255);
   --var-secondary-color-theme: rgb(186, 186, 186);
-  --var-primary-text-color-theme: black;
+  --var-primary-text-color-theme: rgb(27, 27, 27);
   --var-secondary-text-color-theme: rgb(62, 62, 62);
 
   --var-card-width: 450px;
@@ -26,18 +26,36 @@ body {
   padding: 1rem;
 }
 
+.warped {
+  -webkit-filter: url("#squiggly");
+  filter: url("#squiggly");
+}
+
+.textured {
+  -webkit-filter: url("#paper-squiggly");
+  filter: url("#paper-squiggly");
+}
+
 header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
+
 h1 {
-  font-size: 35px;
+  font-size: 3rem;
   font-family: sans-serif;
+  color: #8bc462;
 }
 
 h2 {
   margin: 0 auto;
+
+  -webkit-filter: url("#squiggly");
+  filter: url("#squiggly");
+  font-family: sans-serif;
+
+  color: #8bc462;
 }
 
 a {
@@ -48,16 +66,28 @@ menu {
   margin: 0;
   padding: 0;
   padding-top: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(4rem, 100%), 1fr));
+  gap: 1rem;
 }
 
 menu > li {
   display: inline;
-  padding-right: 1.5rem;
+  width: fit-content;
+  padding: 0.2rem;
+
+  font-size: 1.3rem;
+}
+
+menu > li:hover {
+  background: #8bc462;
+  color: rgb(27, 27, 27);
 }
 
 li > a {
   text-decoration: none;
-  font-family: sans-serif
+  font-family: sans-serif;
 }
 
 ul {
@@ -111,18 +141,18 @@ i {
     font-size: 16px;
   }
   h1 {
-    font-size: 25px;
+    font-size: 2.5rem;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --var-primary-color-theme: rgb(27, 27, 27);
-        --var-secondary-color-theme: rgb(75, 75, 75);
-        --var-primary-text-color-theme: white;
-        --var-secondary-text-color-theme: rgb(183, 183, 183);
-    }
-   .contact {
-        filter: brightness(1);
-   }
+  :root {
+    --var-primary-color-theme: rgb(27, 27, 27);
+    --var-secondary-color-theme: rgb(75, 75, 75);
+    --var-primary-text-color-theme: #ede2c7;
+    --var-secondary-text-color-theme: rgb(183, 183, 183);
   }
+  .contact {
+    filter: brightness(1);
+  }
+}

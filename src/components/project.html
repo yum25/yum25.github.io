@@ -1,0 +1,30 @@
+{% macro projectCard(project) %}
+<li>
+  <article>
+    <a href="{{ project.link }}" target="_blank" rel="noreferrer">
+      {% if project.img %}
+      <img class="preview" src="{{ project.img }}" alt="{{ project.alt }}" />
+      {% elif project.video %}
+      <video
+        id="vid"
+        class="preview"
+        type="video/mp4"
+        autoplay
+        playsinline
+        loop
+        muted
+      >
+        <source src="{{ project.video }}" type="video/mp4" />
+      </video>
+      {% endif %}
+    </a>
+    <p>
+      <a href="{{ project.link }}" target="_blank" rel="noreferrer">
+        <b>{{ project.title }}</b>
+      </a>
+      <br />
+      {{ project.description | safe }}
+    </p>
+  </article>
+</li>
+{% endmacro %}
