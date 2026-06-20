@@ -1,39 +1,22 @@
+{% import "src/components/project.html" as components %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="public/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="public/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="public/favicon-16x16.png"
-    />
-    <link rel="manifest" href="public/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="index.css" />
     <title>Marie Yu</title>
   </head>
   <body>
     <section id="intro">
       <header>
-        <img
-          id="profile"
-          src="assets/me.png"
-          alt="Marie Yu"
-        />
+        <figure id="profile"></figure>
         <div id="about">
-          <h1>Hi, I'm Marie!</h1>
+          <h1 class="textured">Hi, I'm Marie!</h1>
           <p>
             Most recently, I was a full-stack software engineering intern at The
             New York Time's Games team 🧩.
@@ -69,27 +52,27 @@
             >.
           </p>
           <menu>
-            <li>
+            <li class="warped">
               <a href="assets/Resume.pdf">
-                <b>RESUME</b>
+                <b>resume</b>
               </a>
             </li>
-            <li>
+            <li class="warped">
               <a
                 href="https://github.com/yum25"
                 target="_blank"
                 rel="noreferrer"
               >
-                <b>GITHUB</b>
+                <b>github</b>
               </a>
             </li>
-            <li>
+            <li class="warped">
               <a
                 href="https://www.linkedin.com/in/marie-yu/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <b>LINKEDIN</b>
+                <b>linkedin</b>
               </a>
             </li>
           </menu>
@@ -97,316 +80,28 @@
       </header>
     </section>
     <main>
-      <!-- <section>
-        <h2>Blog</h2>
-        <hr />
-        <h3 style="text-align: center">Coming Soon...</h3>
-      </section> -->
       <section>
         <h2>Full-stack Engineering</h2>
-        <hr />
         <ul>
-          <li>
-            <article>
-              <a
-                href="https://yum25.github.io/nyt-strands-stats/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/nyt-strands.png"
-                  alt="The New York Times Strands"
-                />
-              </a>
-              <p>
-                <a
-                  href="https://yum25.github.io/nyt-strands-stats/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b>NYT Games: Strands Stats and Streaks</b>
-                </a>
-                <br />
-                My work as a NYT Games intern working on adding player
-                statistics and streaks to Strands!
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://games.michigandaily.com/crosswords"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/tmd-games.png"
-                  alt="The Michigan Daily Crosswords"
-                />
-              </a>
-              <p>
-                <a
-                  href="https://games.michigandaily.com/crosswords"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b>The Michigan Daily Games</b>
-                </a>
-                <br />
-                A content management system with a user-facing crosswords player
-                and links player.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/tmd-mobile.png"
-                  alt="The Michigan Daily Mobile App"
-                />
-              </a>
-              <p>
-                <a
-                  href="https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> The Michigan Daily Mobile App </b>
-                </a>
-                <br />
-                An iOS and Android app that displays The Michigan Daily's latest
-                news and stories.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://michigan-daily-alt-text-tracker.pages.dev/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/alt-text-tracker.png"
-                  alt="Alternative text tracker"
-                />
-              </a>
-              <p>
-                <i>March, 2024</i><br />
-                <a
-                  href="https://michigan-daily-alt-text-tracker.pages.dev"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Alt Text Tracker </b>
-                </a>
-                <br />
-                Tracks The Michigan Daily's use of alternative text and audits
-                alternative text usage every day.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://mapping-puzzle.pages.dev"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/mapping-puzzle.png"
-                  alt="Detroit-Windsor Mapping Puzzle"
-                />
-              </a>
-              <p>
-                <a
-                  href="https://mapping-puzzle.pages.dev"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Detroit-Windsor Mapping Puzzle </b>
-                </a>
-                <br />
-                An interactive puzzle to test your knowledge of Detroit's
-                neighboring cities.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://www.detroit-neighborhoods.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/neighborhoods.png"
-                  alt="Detroit Neighborhoods + Civic Census"
-                />
-              </a>
-              <p>
-                <a
-                  href="https://www.detroit-neighborhoods.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b>Detroit Neighborhoods + Civic Census</b>
-                </a>
-                <br />
-                Community defined neighborhoods with a peer
-                <a
-                  href="https://org-census.detroit-neighborhoods.pages.dev/orgs"
-                  >Civic Census</a
-                >
-                that connects orgs to funding and tract-level
-                stats.
-              </p>
-            </article>
-          </li>
+          {% for project in fullstack %} {{ components.projectCard(project) }}
+          {% endfor %}
         </ul>
       </section>
       <section>
         <h2>Web Design</h2>
-        <hr />
         <ul>
-          <li>
-            <article>
-              <a
-                href="https://specials.michigandaily.com/2024/opinion-elections/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/opinion-elections.png"
-                  alt="Opinion Elections"
-                />
-              </a>
-              <p>
-                <i>November, 2024</i><br />
-                <a
-                  href="https://specials.michigandaily.com/2024/opinion-elections/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Elections Commentary 2024 </b>
-                </a>
-                <br />
-                A website for The Michigan Daily Opinion endorsements,
-                editorials, commentary and data graphics
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://specials.michigandaily.com/2024/love-notes/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <video
-                  id="vid"
-                  class="preview"
-                  type="video/mp4"
-                  autoplay
-                  playsinline
-                  loop
-                  muted
-                >
-                  <source src="assets/lovenotes.mp4" type="video/mp4" />
-                </video>
-              </a>
-              <p>
-                <i>February, 2024</i><br />
-                <a
-                  href="https://specials.michigandaily.com/2024/love-notes/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Love Notes 2024 </b>
-                </a>
-                <br />
-                A website for The Michigan Daily Statement Love Edition,
-                displaying love notes sent between students.
-              </p>
-            </article>
-          </li>
+          {% for project in webdesign %} {{ components.projectCard(project) }}
+          {% endfor %}
         </ul>
       </section>
       <section>
         <h2>Data Visualization</h2>
-        <hr />
         <ul>
-          <li>
-            <article>
-              <a
-                href="https://sappho-in-data.pages.dev/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/sappho.png"
-                  alt="Sappho in Data"
-                />
-              </a>
-              <p>
-                <i>December, 2024</i><br />
-                <a
-                  href="https://sappho-in-data.pages.dev/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Sappho in Data </b>
-                </a>
-                <br />
-                A fun visualization of Sappho's Fragments translated by Anne
-                Carson in <i>If Not, Winter</i>, categorized using a machine
-                learning algorithm.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a
-                href="https://yum25.github.io/a2-election-vizs/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  class="preview"
-                  src="assets/election-viz.png"
-                  alt="Live Election Trackers 2024"
-                />
-              </a>
-              <p>
-                <i>November, 2024</i><br />
-                <a
-                  href="https://yum25.github.io/a2-election-vizs/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <b> Live Election Trackers 2024 </b>
-                </a>
-                <br />
-                Live trackers for voting wait times and result updates on the
-                City of Ann Arbor proposals made for The Michigan Daily.
-              </p>
-            </article>
-          </li>
+          {% for project in dataviz %} {{ components.projectCard(project) }} {%
+          endfor %}
         </ul>
       </section>
     </main>
+    {% include "src/components/filters.html" %}
   </body>
 </html>
