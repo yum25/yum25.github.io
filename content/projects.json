@@ -2,7 +2,7 @@
   "fullstack": [
     {
       "title": "NYT Strands Stats and Streaks",
-      "link": "https://yum25.github.io/nyt-strands-stats/",
+      "link": "/blog/strands.html",
       "img": "assets/nyt-strands.png",
       "alt": "The New York Times Strands",
       "description": "My work as a NYT Games intern working on adding player statistics and streaks to Strands!"

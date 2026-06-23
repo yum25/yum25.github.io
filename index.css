@@ -6,6 +6,7 @@
 
   --var-card-width: 450px;
 }
+
 html,
 body {
   font-size: 20px;
@@ -31,25 +32,22 @@ body {
   filter: url("#squiggly");
 }
 
-.textured {
-  -webkit-filter: url("#paper-squiggly");
-  filter: url("#paper-squiggly");
-}
-
 header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-h1 {
+.heading {
   font-size: 3rem;
-  font-family: sans-serif;
+  font-style: italic;
   color: #8bc462;
 }
 
-h2 {
+.subheading {
   margin: 0 auto;
+
+  font-size: 1.25rem;
 
   -webkit-filter: url("#squiggly");
   filter: url("#squiggly");
@@ -123,13 +121,16 @@ article > p {
 i {
   color: var(--var-secondary-text-color-theme);
 }
+
 #profile {
   width: 35%;
   object-fit: contain;
 }
+
 #about {
   width: 60%;
 }
+
 @media (max-width: 1000px) {
   #about {
     width: 100%;
@@ -149,7 +150,7 @@ i {
   :root {
     --var-primary-color-theme: rgb(27, 27, 27);
     --var-secondary-color-theme: rgb(75, 75, 75);
-    --var-primary-text-color-theme: #ede2c7;
+    --var-primary-text-color-theme: lightgray;
     --var-secondary-text-color-theme: rgb(183, 183, 183);
   }
   .contact {

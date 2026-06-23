@@ -1,107 +1,86 @@
-{% import "src/components/project.html" as components %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Marie Yu</title>
-  </head>
-  <body>
-    <section id="intro">
-      <header>
-        <figure id="profile"></figure>
-        <div id="about">
-          <h1 class="textured">Hi, I'm Marie!</h1>
-          <p>
-            Most recently, I was a full-stack software engineering intern at The
-            New York Time's Games team 🧩.
-          </p>
-          <p>
-            I studied Computer Science 🤖👾 at the University of Michigan 〽️.
-            Previously, I was a software engineer at
-            <a
-              href="https://www.michigandaily.com"
-              target="_blank"
-              rel="noreferrer"
-              >The Michigan Daily</a
-            >
-            🗞📰 and
-            <a href="https://www.avenuapp.com/" target="_blank" rel="noreferrer"
-              >Avenu</a
-            >.<br aria-hidden="true" />
-          </p>
-          <p>
-            I'm a big fan of developing for newsrooms, frontend, and full-stack
-            development. I believe in the ability of Computer Science as a means
-            for artistic expression and to do good in the world.
-          </p>
-          <p>
-            I also believe that Computer Science as a discipline should be
-            accessible to all. To put this belief into practice, I taught coding
-            for
-            <a
-              href="http://www.sevenmileum.org/"
-              target="_blank"
-              rel="noreferrer"
-              >Seven Mile</a
-            >.
-          </p>
-          <menu>
-            <li class="warped">
-              <a href="assets/Resume.pdf">
-                <b>resume</b>
-              </a>
-            </li>
-            <li class="warped">
-              <a
-                href="https://github.com/yum25"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <b>github</b>
-              </a>
-            </li>
-            <li class="warped">
-              <a
-                href="https://www.linkedin.com/in/marie-yu/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <b>linkedin</b>
-              </a>
-            </li>
-          </menu>
-        </div>
-      </header>
-    </section>
-    <main>
-      <section>
-        <h2>Full-stack Engineering</h2>
-        <ul>
-          {% for project in fullstack %} {{ components.projectCard(project) }}
-          {% endfor %}
-        </ul>
-      </section>
-      <section>
-        <h2>Web Design</h2>
-        <ul>
-          {% for project in webdesign %} {{ components.projectCard(project) }}
-          {% endfor %}
-        </ul>
-      </section>
-      <section>
-        <h2>Data Visualization</h2>
-        <ul>
-          {% for project in dataviz %} {{ components.projectCard(project) }} {%
-          endfor %}
-        </ul>
-      </section>
-    </main>
-    {% include "src/components/filters.html" %}
-  </body>
-</html>
+{% import "src/components/project.html" as components %} 
+{% extends "layouts/base.html" %} 
+{% block title %}Marie Yu{% endblock %} 
+
+{% block content %}
+<section id="intro">
+  <header>
+    <figure id="profile"></figure>
+    <div id="about">
+      <h1 class="heading">Hi, I'm Marie!</h1>
+      <p>
+        Most recently, I was a full-stack software engineering intern at The New
+        York Time's Games team 🧩.
+      </p>
+      <p>
+        I studied Computer Science 🤖👾 at the University of Michigan 〽️.
+        Previously, I was a software engineer at
+        <a href="https://www.michigandaily.com" target="_blank" rel="noreferrer"
+          >The Michigan Daily</a
+        >
+        🗞📰 and
+        <a href="https://www.avenuapp.com/" target="_blank" rel="noreferrer"
+          >Avenu</a
+        >.<br aria-hidden="true" />
+      </p>
+      <p>
+        I'm a big fan of developing for newsrooms, frontend, and full-stack
+        development. I believe in the ability of Computer Science as a means for
+        artistic expression and to do good in the world.
+      </p>
+      <p>
+        I also believe that Computer Science as a discipline should be
+        accessible to all. To put this belief into practice, I taught coding for
+        <a href="http://www.sevenmileum.org/" target="_blank" rel="noreferrer"
+          >Seven Mile</a
+        >.
+      </p>
+      <menu>
+        <li class="warped">
+          <a href="assets/Resume.pdf">
+            <b>resume</b>
+          </a>
+        </li>
+        <li class="warped">
+          <a href="https://github.com/yum25" target="_blank" rel="noreferrer">
+            <b>github</b>
+          </a>
+        </li>
+        <li class="warped">
+          <a
+            href="https://www.linkedin.com/in/marie-yu/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <b>linkedin</b>
+          </a>
+        </li>
+      </menu>
+    </div>
+  </header>
+</section>
+<main>
+  <section>
+    <h2 class="subheading">Full-stack Engineering</h2>
+    <ul>
+      {% for project in fullstack %} {{ components.projectCard(project) }} {%
+      endfor %}
+    </ul>
+  </section>
+  <section>
+    <h2 class="subheading">Web Design</h2>
+    <ul>
+      {% for project in webdesign %} {{ components.projectCard(project) }} {%
+      endfor %}
+    </ul>
+  </section>
+  <section>
+    <h2 class="subheading">Data Visualization</h2>
+    <ul>
+      {% for project in dataviz %} {{ components.projectCard(project) }} {%
+      endfor %}
+    </ul>
+  </section>
+</main>
+{% include "src/components/filters.html" %}
+{% endblock %} 
