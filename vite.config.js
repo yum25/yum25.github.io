@@ -1,5 +1,6 @@
 import nunjucks from "nunjucks";
 import { readFileSync } from "node:fs";
+import { resolve } from "path";
 
 function nunjucksPlugin() {
   return {
@@ -17,8 +18,16 @@ function nunjucksPlugin() {
     },
   };
 }
+
 export default {
-  // config options
   plugins: [nunjucksPlugin()],
   base: "/",
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        strands: resolve(__dirname, "blog/strands.html"),
+      },
+    },
+  },
 };
