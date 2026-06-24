@@ -45,8 +45,6 @@ header {
 }
 
 .subheading {
-  margin: 0 auto;
-
   font-size: 1.25rem;
 
   -webkit-filter: url("#squiggly");
@@ -54,6 +52,21 @@ header {
   font-family: sans-serif;
 
   color: #8bc462;
+}
+
+.listheading {
+  font-size: 1.1rem;
+
+  -webkit-filter: url("#squiggly");
+  filter: url("#squiggly");
+  font-family: sans-serif;
+
+  color: #8bc462;
+}
+
+.listheading::before {
+  content: "✴ ";
+  color: orange;
 }
 
 a {
@@ -67,6 +80,7 @@ a {
 a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
+  text-decoration-thickness: 2px;
   font-weight: 600;
 }
 
