@@ -89,8 +89,8 @@ menu {
   padding: 0;
   padding-top: 1rem;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(4rem, 100%), 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
