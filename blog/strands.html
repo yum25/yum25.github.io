@@ -3,24 +3,96 @@
 {% block content %}
     <h1 class="subheading">Building Strands Statistics and Streaks</h1>
     <i>A NYT internship retrospective</i>
-    <main style="max-width: 600px;">
-        <p>
-            In the Summer of 2025, I was an intern at NYT Games. During that
-            time, I contributed to pushing out the Strands Stats and Streaks
-            feature. It was a really fun time, and I'm proud of the work I
-            accomplished and think fondly back to working on the team. However,
-            I had no real way of showcasing my work, since it would mostly be
-            linking back to the NYT Games website. So here it is: my own little
-            blog/article on the features I pushed out with the team!
-        </p>
-        <p>
-            This serves as my little informal intern retrospective and a log
-            of some of the things I accomplished.
-        </p>
-        <h2 class="subheading">Welcome</h2>
+    <div>
+        <main style="max-width: 600px;">
+            <p>
+                In the Summer of 2025, I was an intern at NYT Games. During that
+                time, I contributed to pushing out the Strands Stats and Streaks
+                feature. It was a really fun time, and I'm proud of the work I
+                accomplished and think fondly back to working on the team. However,
+                I had no real way of showcasing my work, since it would mostly be
+                linking back to the NYT Games website. So here it is: my own little
+                blog/article on the features I pushed out with the team!
+            </p>
+            <p>
+                This also serves as my informal intern retrospective and a log
+                of some of the things I accomplished.
+            </p>
+            <h2 class="subheading">Welcome</h2>
+            <p>
+                One of my earliest tasks was to create a dynamic welcome screen for Strands that
+                would display the player's progress on their daily puzzle. A different progress icon
+                and text would be displayed depending on how many words a player has found:
+            </p>
+            <p>
+                It was super cool to immediately see my changes reflected onto the screen, especially
+                for such a major games feature. However, I would soon learn that coding up a feature
+                was only the beginning!
+            </p>
+            <h3 class="listheading">Feature Flags</h3>
+            <p>
+                Here was my first exposure to feature flags, a crucial part of product development.
+                For every new feature, we wrap the affected code around a flag that acts as a sort of
+                <i>remote boolean</i> (is that a kind of cursed way of describing it?). Feature flags are
+                powerful because they allow for incremental rollout of features. You can more gradually
+                introduce features into your audience base, A/B test the feature, and find bugs during
+                less critical phases of rollout.
+            </p>
+            <p>
+                As someone who's previous engineering internships were at scrappy startups and student
+                newsrooms, this was quite illuminating. All of my experience was to code fast, break things.
+                Who knew there was a better way of shipping features than just haphazardly dumping it straight
+                into production?
+            </p>
+            <h3 class="listheading">Unit Testing</h3>
+            <p></p>
+        </h2>
         <h2 class="subheading">Congrats</h2>
+        <p>
+            For the Strands completion screen, I added a display where the player can see a row of their statistics
+            on Strands. This completion screen is dynamic based on the user state of the player. For example, if the player
+            is not registered, instead of displaying statistics, we display a registration CTA which encourages players to
+            register to see their unique statistics.
+        </p>
         <h2 class="subheading">Modal</h2>
-        <h2 class="subheading">Feature Flags</h2>
+        <p>
+            I added a dismissable message that notifies players about the new Strands stats feature.
+            This message uses local storage to ensure the user sees the message at least twice before it disappears.
+        </p>
         <h2 class="subheading">Pipeline</h2>
+        <p>
+            Lastly, was displaying the statistics themselves. Collaborating with other engineers on this task,
+            I learned how we store and track player statistics through a Golang pipeline to a database, incrementing stats such
+            as "Spangram Firsts" and "No Hints" when the player enters the Strands player or finishes a puzzle.
+        </p>
+        <h2 class="subheading">My Secret Second Thing</h2>
+        <p>Under Construction</p>
+        <h2 class="subheading">Retrospective - TL;DR</h2>
+        <p>
+            While listing the features, I was often struck with a feeling of <i>that's it</i>? Not
+            because what happened during my internship was lackluster, but because I realized that I was focusing
+            too largely on the technical aspects and volume, when what was really valuable was the process.
+            When I dug deeper into my experiences, I realized the meat of the real engineering was understanding
+            the impact, the user experience and the systems for managing a rapidly changing codebase.
+        </p>
+        <p>
+            Largely what I did during my internship was use tehcnologies I've already used in a more refined way.
+            I had this misconception that felt very <i>junior software engineer</i>: that engineering was largely
+            about coding and technical skills. I exited the experience understanding it was so much more - that
+            engineers must refine their product sense and systems understanding.
+        </p>
+        <p>
+            I found myself quite influenced by the experience - afterwards I would find myself compelled to write
+            engineering docs, draw out systems, and consider source control workflows before I even coded a single line.
+            It made collaborating with people, and even with myself way easier. It definitely helps when you meet and work
+            with so many great people!
+        </p>
+        <p>
+            Sometimes I still can't believe I contributed to games that millions of people play every day. It's super
+            cool and surreal, and I'm beyond lucky to have had that experience.
+        </p>
     </main>
+    <section>
+    </section>
+</div>
 {% endblock %}
