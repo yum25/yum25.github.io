@@ -57,7 +57,17 @@ header {
 }
 
 a {
-  color: inherit;
+  color: cornflowerblue;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  font-weight: 600;
 }
 
 menu {
@@ -70,11 +80,13 @@ menu {
   gap: 1rem;
 }
 
-menu > li {
+menu > li,
+menu > li > a {
   display: inline;
   width: fit-content;
   padding: 0.2rem;
 
+  color: inherit;
   font-size: 1.3rem;
 }
 
@@ -102,7 +114,12 @@ ul {
 
 article {
   display: grid;
+  padding: 1.25rem;
   max-width: var(--var-card-width);
+}
+
+article:hover {
+  background: rgb(10, 10, 10);
 }
 
 article > p {
@@ -131,7 +148,7 @@ i {
   width: 60%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   #about {
     width: 100%;
   }

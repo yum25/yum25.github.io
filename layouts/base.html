@@ -7,11 +7,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
         <link rel="manifest" href="site.webmanifest" />
+        <link rel="stylesheet" href="/css/index.css" />
+        {% block head %}{% endblock %}
         <title>{% block title %}Marie Yu{% endblock %}</title>
     </head>
     <body>
         {% block content %}{% endblock %}
     </body>
-    {% include "src/components/filters.html" %}
-    <script type="module" src="/index.js"></script>
+    {% include "components/filters.html" %}
 </html>
