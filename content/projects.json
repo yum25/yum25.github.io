@@ -3,42 +3,42 @@
     {
       "title": "NYT Strands Stats and Streaks",
       "link": "/blog/strands.html",
-      "img": "assets/nyt-strands.png",
+      "img": "assets/index/nyt-strands.png",
       "alt": "The New York Times Strands",
       "description": "My work as a NYT Games intern working on adding player statistics and streaks to Strands!"
     },
     {
       "title": "The Michigan Daily Games",
       "link": "https://games.michigandaily.com/",
-      "img": "assets/tmd-games.png",
+      "img": "assets/index/tmd-games.png",
       "alt": "The Michigan Daily Crosswords",
       "description": "A content management system with a user-facing crosswords player and links player."
     },
     {
       "title": "The Michigan Daily Mobile App",
       "link": "https://apps.apple.com/us/app/the-michigan-daily/id1615063980?platform=iphone",
-      "img": "assets/tmd-mobile.png",
+      "img": "assets/index/tmd-mobile.png",
       "alt": "The Michigan Daily Mobile App",
       "description": "An iOS and Android app that displays The Michigan Daily's latest news and stories."
     },
     {
       "title": "Alt Text Tracker",
       "link": "https://michigan-daily-alt-text-tracker.pages.dev/",
-      "img": "assets/alt-text-tracker.png",
+      "img": "assets/index/alt-text-tracker.png",
       "alt": "The Michigan Daily Alternative Text Tracker",
       "description": "Tracks The Michigan Daily's use of alternative text and audits alternative text usage every day."
     },
     {
       "title": "Detroit-Windsor Mapping Puzzle",
       "link": "https://mapping-puzzle.pages.dev",
-      "img": "assets/mapping-puzzle.png",
+      "img": "assets/index/mapping-puzzle.png",
       "alt": "Detroit-Windsor Mapping Puzzle",
       "description": "An interactive puzzle to test your knowledge of Detroit's neighboring cities."
     },
     {
       "title": "Detroit Neighborhoods + Civic Census",
       "link": "https://www.detroit-neighborhoods.com/",
-      "img": "assets/neighborhoods.png",
+      "img": "assets/index/neighborhoods.png",
       "alt": "Detroit Neighborhoods + Civic Census",
       "description": "Community defined neighborhoods with a peer <a href='https://detroit-neighborhoods.pages.dev/civic' >Civic Census</a > that connects orgs to funding and tract-level stats."
     }
@@ -47,14 +47,14 @@
     {
       "title": "Elections Commentary 2024",
       "link": "https://specials.michigandaily.com/2024/opinion-elections/",
-      "img": "assets/opinion-elections.png",
+      "img": "assets/index/opinion-elections.png",
       "alt": "Opinion Elections",
       "description": "A website for The Michigan Daily Opinion endorsements, editorials, commentary and data graphics"
     },
     {
       "title": "Love Notes 2024",
       "link": "https://specials.michigandaily.com/2024/love-notes/",
-      "video": "assets/lovenotes.mp4",
+      "video": "assets/index/lovenotes.mp4",
       "alt": "Love Notes 2024",
       "description": "A website for The Michigan Daily Statement Love Edition, displaying love notes sent between students."
     }
@@ -63,14 +63,14 @@
     {
       "title": "Sappho in Data",
       "link": "https://sappho-in-data.pages.dev/",
-      "img": "assets/sappho.png",
+      "img": "assets/index/sappho.png",
       "alt": "Sappho in Data",
       "description": "A fun visualization of Sappho's Fragments translated by Anne Carson in <i>If Not, Winter</i>, categorized using a machine learning algorithm."
     },
     {
       "title": "Live Election Trackers 2024",
       "link": "https://yum25.github.io/a2-election-vizs/",
-      "img": "assets/election-viz.png",
+      "img": "assets/index/election-viz.png",
       "alt": "Live Election Trackers 2024",
       "description": "Live trackers for voting wait times and result updates on the City of Ann Arbor proposals made for The Michigan Daily."
     }
