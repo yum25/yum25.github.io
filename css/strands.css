@@ -1,13 +1,5 @@
-@keyframes in {
-  to {
-    margin-right: -1rem;
-  }
-
-  @keyframes out {
-    to {
-      margin-right: -16rem;
-    }
-  }
+body {
+  overflow-x: hidden;
 }
 
 .blog-aside-container {
@@ -43,6 +35,10 @@
   background: var(--var-secondary-color-theme);
 }
 
+.blog-aside a {
+  font-size: 0.85rem;
+}
+
 .blog-image img {
   object-fit: cover;
   max-width: 15rem;
@@ -51,9 +47,44 @@
   border-radius: 5px;
 }
 
+.ref,
+.ref:hover {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+
+  text-decoration-style: inherit;
+  text-decoration-color: orange;
+}
+
+.ref:after {
+  content: " •";
+  color: orange;
+}
+
+.blog-aside-container:has(.blog-aside:hover) .ref {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+}
+
+.blog-aside:hover,
+.blog-aside-container:has(.ref:hover) .blog-aside {
+  border-left: 2px solid orange;
+}
+
 @media screen and (max-width: 900px) {
-  .blog-image:active,
-  .blog-aside:active {
-    animation: in 0.1s ease-out forwards;
+  .blog-image,
+  .blog-aside {
+    transition: transform 0.2s ease;
+  }
+
+  .blog-image:hover,
+  .blog-aside:hover {
+    transform: translateX(-14rem);
+  }
+
+  .blog-aside-container:has(.ref:hover) .blog-aside {
+    transform: translateX(-14rem);
   }
 }
