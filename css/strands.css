@@ -1,0 +1,59 @@
+@keyframes in {
+  to {
+    margin-right: -1rem;
+  }
+
+  @keyframes out {
+    to {
+      margin-right: -16rem;
+    }
+  }
+}
+
+.blog-aside-container {
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+}
+
+.blog-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -16rem;
+
+  z-index: 1;
+}
+
+.blog-aside {
+  border-left: 2px solid gray;
+  font-size: 0.85rem;
+
+  width: 15rem;
+  box-sizing: border-box;
+  padding: 5px 1rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -16rem;
+
+  z-index: 1;
+
+  background: var(--var-secondary-color-theme);
+}
+
+.blog-image img {
+  object-fit: cover;
+  max-width: 15rem;
+  max-height: 15rem;
+
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .blog-image:active,
+  .blog-aside:active {
+    animation: in 0.1s ease-out forwards;
+  }
+}

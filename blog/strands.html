@@ -1,4 +1,7 @@
 {% extends "layouts/base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="/css/strands.css" />
+{% endblock %}
 {% block title %}Building Strands Statistics and Streaks{% endblock %}
 {% block content %}
     <h1 class="subheading">Building Strands Statistics and Streaks</h1>
@@ -19,11 +22,16 @@
                 of some of the things I accomplished.
             </p>
             <h2 class="subheading">Welcome</h2>
-            <p>
-                One of my earliest tasks was to create a dynamic welcome screen for Strands that
-                would display the player's progress on their daily puzzle. A different progress icon
-                and text would be displayed depending on how many words a player has found:
-            </p>
+            <div class="blog-aside-container">
+                <p>
+                    One of my earliest tasks was to create a dynamic welcome screen for Strands that
+                    would display the player's progress on their daily puzzle. A different progress icon
+                    and text would be displayed depending on how many words a player has found:
+                </p>
+                <figure class="blog-image">
+                    <img src="/assets/blog/strands/welcome.png" alt="Strands welcome screen">
+                </figure>
+            </div>
             <p>
                 It was super cool to immediately see my changes reflected onto the screen, especially
                 for such a major games feature. However, I would soon learn that coding up a feature
@@ -38,22 +46,47 @@
                 introduce features into your audience base, A/B test the feature, and find bugs during
                 less critical phases of rollout.
             </p>
-            <p>
-                As someone who's previous engineering internships were at scrappy startups and student
-                newsrooms, this was quite illuminating. All of my experience was to code fast, break things.
-                Who knew there was a better way of shipping features than just haphazardly dumping it straight
-                into production?
-            </p>
+            <div class="blog-aside-container">
+                <aside class="blog-aside">
+                    Granted, I wasn't totally clueless - I was familiar with some deployment patterns, such as using a dev branch
+                    and a more protected main branch.
+                </aside>
+                <p>
+                    As someone who's previous engineering internships were at scrappy startups and student
+                    newsrooms, this was quite illuminating. All of my experience was to code fast, break things.
+                    Who knew there was a better way of shipping features than just haphazardly dumping it straight
+                    into production?
+                </p>
+            </div>
             <h3 class="listheading">Unit Testing</h3>
             <p></p>
         </h2>
         <h2 class="subheading">Congrats</h2>
-        <p>
-            For the Strands completion screen, I added a display where the player can see a row of their statistics
-            on Strands. This completion screen is dynamic based on the user state of the player. For example, if the player
-            is not registered, instead of displaying statistics, we display a registration CTA which encourages players to
-            register to see their unique statistics.
-        </p>
+        <div class="blog-aside-container">
+            <div class="blog-image">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <img src="/assets/blog/strands/congrats.png" alt="Strands congrats screen" />
+                    <img src="/assets/blog/strands/error.png"
+                         alt="Strands congrats error on statistics display" />
+                </div>
+            </div>
+            <div>
+                <p>
+                    Once I got into the flow of completing tasks, the work became more predictable.
+                    The rest of what I did follows the same general workflow as I described above.
+                </p>
+                <p>
+                    For the Strands completion screen, I added a display where the player can see a row of their statistics
+                    on Strands. This completion screen is dynamic based on the user state of the player. For example, if the player
+                    is not registered, instead of displaying statistics, we display a registration CTA which encourages players to
+                    register to see their unique statistics.
+                </p>
+                <p>
+                    The completion screen was especially fun since I got to design my own component! We didn't have an existing
+                    component for a placeholder error view, so I got to tackle that myself.
+                </p>
+            </div>
+        </div>
         <h2 class="subheading">Modal</h2>
         <p>
             I added a dismissable message that notifies players about the new Strands stats feature.
@@ -68,15 +101,22 @@
         <h2 class="subheading">My Secret Second Thing</h2>
         <p>Under Construction</p>
         <h2 class="subheading">Retrospective - TL;DR</h2>
+        <div class="blog-aside-container">
+            <aside class="blog-aside">
+                Recently I saw a clip of a Google Talk detailing the tension between code merge speed
+                and rollback viability. In the age of AI, building faster can destabilize other aspects of product
+                maintenance and safety.
+            </aside>
+            <p>
+                While listing the features, I was often struck with a feeling of <i>that's it</i>? Not
+                because what happened during my internship was lackluster, but because I realized that I was focusing
+                too largely on the technical aspects and volume, when what was really valuable was the process.
+                When I dug deeper into my experiences, I realized the meat of the real engineering was understanding
+                the impact, the user experience and the systems for managing a rapidly changing codebase.
+            </p>
+        </div>
         <p>
-            While listing the features, I was often struck with a feeling of <i>that's it</i>? Not
-            because what happened during my internship was lackluster, but because I realized that I was focusing
-            too largely on the technical aspects and volume, when what was really valuable was the process.
-            When I dug deeper into my experiences, I realized the meat of the real engineering was understanding
-            the impact, the user experience and the systems for managing a rapidly changing codebase.
-        </p>
-        <p>
-            Largely what I did during my internship was use tehcnologies I've already used in a more refined way.
+            Largely what I did during my internship was use technologies I've already used in a more refined way.
             I had this misconception that felt very <i>junior software engineer</i>: that engineering was largely
             about coding and technical skills. I exited the experience understanding it was so much more - that
             engineers must refine their product sense and systems understanding.
@@ -92,7 +132,5 @@
             cool and surreal, and I'm beyond lucky to have had that experience.
         </p>
     </main>
-    <section>
-    </section>
 </div>
 {% endblock %}
