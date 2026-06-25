@@ -1,3 +1,4 @@
+html,
 body {
   overflow-x: hidden;
 }
@@ -12,7 +13,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: -16rem;
+  margin-right: -15.5rem;
 
   z-index: 1;
 }
@@ -28,7 +29,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: -16rem;
+  margin-right: -15.5rem;
 
   z-index: 1;
 
@@ -47,25 +48,16 @@ body {
   border-radius: 5px;
 }
 
-.ref,
-.ref:hover {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-
-  text-decoration-style: inherit;
-  text-decoration-color: orange;
-}
-
 .ref:after {
   content: " •";
   color: orange;
 }
 
+.ref:hover,
 .blog-aside-container:has(.blog-aside:hover) .ref {
   text-decoration: underline;
+  text-decoration-color: orange;
   text-decoration-thickness: 2px;
-  font-weight: 600;
 }
 
 .blog-aside:hover,
