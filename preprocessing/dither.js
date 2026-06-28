@@ -1,6 +1,10 @@
 import sharp from "sharp";
-
-const ASSETS_PATH = "./public/assets";
+import {
+  COLOR_SCALE,
+  HERO_IMAGE_HEIGHT,
+  HERO_IMAGE_WIDTH,
+} from "./_defaults.js";
+import { basename, extname } from "node:path";
 
 function bayerMatrix(n) {
   if (n === 1) return [[0]];
@@ -47,7 +51,7 @@ async function image(path, width, height) {
   };
 }
 
-function pixel(matrix, brightness, x, y, levels = 2) {
+function pixel(matrix, brightness, x, y, levels = 4) {
   const cell = matrix[y % matrix.length][x % matrix.length];
   const offset = (cell + 0.5) / (matrix.length * matrix.length) - 0.5;
 
@@ -57,7 +61,7 @@ function pixel(matrix, brightness, x, y, levels = 2) {
   return level / (levels - 1);
 }
 
-function dithered(brightness, width, height, n, levels = 2) {
+function dithered(brightness, width, height, n, levels = 4) {
   const matrix = bayerMatrix(n);
   const out = new Float32Array(width * height);
 
@@ -71,44 +75,12 @@ function dithered(brightness, width, height, n, levels = 2) {
   return out;
 }
 
-async function ditheredWebP(path, dithered, width, height, levels = 2) {
-  const WHITE = [238, 222, 197];
-  const CREAM = [182, 178, 165];
-  const BEIGE = [102, 99, 98];
-  const BLACK = [27, 27, 27];
+async function ditheredWebP(path, dithered, width, height, levels = 4, scale) {
   const rgba = Buffer.alloc(width * height * 4);
   for (let i = 0; i < width * height; i++) {
     const level = Math.round(dithered[i] * (levels - 1));
-    let RGB = WHITE;
-    if (levels === 2) {
-      switch (level) {
-        case 0:
-          RGB = BLACK;
-          break;
-        case 1:
-          RGB = WHITE;
-          break;
-      }
-    } else if (levels === 4) {
-      switch (level) {
-        case 0:
-          RGB = BLACK;
-          break;
-        case 1:
-          RGB = BEIGE;
-          break;
-        case 2:
-          RGB = CREAM;
-          break;
-        case 3:
-          RGB = WHITE;
-          break;
-      }
-    } else {
-      throw Error("Unsupported number of levels.");
-    }
 
-    const [r, g, b] = RGB;
+    const [r, g, b] = scale[level];
 
     rgba[i * 4] = r;
     rgba[i * 4 + 1] = g;
@@ -120,18 +92,17 @@ async function ditheredWebP(path, dithered, width, height, levels = 2) {
     .toFile(path);
 }
 
-async function preprocess() {
-  const data = await image("./assets/hero.jpg", 250, 300);
+export async function preprocess(path, output) {
+  const data = await image(path, HERO_IMAGE_WIDTH, HERO_IMAGE_HEIGHT);
   const brightnessArray = brightness(data);
   const res = dithered(brightnessArray, data.width, data.height, 4, 4);
 
   await ditheredWebP(
-    `${ASSETS_PATH}/clouds.webp`,
+    `${output}/${basename(path, extname(path))}.webp`,
     res,
     data.width,
     data.height,
     4,
+    COLOR_SCALE,
   );
 }
-
-await preprocess();
