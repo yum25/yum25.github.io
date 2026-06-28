@@ -10,7 +10,7 @@ import {
 } from "node:fs";
 
 const ASSETS_PATH = "./public/assets";
-const ASSET_WIDTH = 900;
+const ASSET_WIDTH = 650;
 
 async function convert(path, width, height) {
   const res = sharp(path)
