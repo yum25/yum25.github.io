@@ -3,7 +3,10 @@
         <article>
             <a href="{{ project.link }}" target="_blank" rel="noreferrer">
                 {% if project.img %}
-                    <img class="preview" src="{{ project.img }}" alt="{{ project.alt }}" />
+                    <img class="preview"
+                         src="{{ project.img }}"
+                         alt="{{ project.alt }}"
+                         loading="lazy" />
                 {% elif project.video %}
                     <video id="vid"
                            class="preview"
