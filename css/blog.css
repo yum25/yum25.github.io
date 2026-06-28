@@ -3,6 +3,21 @@ body {
   overflow-x: hidden;
 }
 
+.listheading {
+  font-size: 1.1rem;
+
+  -webkit-filter: url("#squiggly");
+  filter: url("#squiggly");
+  font-family: sans-serif;
+
+  color: #8bc462;
+}
+
+.listheading::before {
+  content: "✴ ";
+  color: orange;
+}
+
 .blog-aside-container {
   display: grid;
   grid-auto-flow: column;
