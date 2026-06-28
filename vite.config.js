@@ -22,7 +22,6 @@ function nunjucksPlugin() {
 export default {
   plugins: [nunjucksPlugin()],
   base: "/",
-  publicDir: "assets/processed",
   build: {
     rollupOptions: {
       input: {

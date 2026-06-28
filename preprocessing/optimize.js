@@ -9,7 +9,7 @@ import {
   copyFile,
 } from "node:fs";
 
-const ASSETS_PATH = "./assets/processed";
+const ASSETS_PATH = "./public/assets";
 const ASSET_WIDTH = 900;
 
 async function convert(path, width, height) {
