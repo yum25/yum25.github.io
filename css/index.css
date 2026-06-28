@@ -97,16 +97,38 @@ article > p {
 }
 
 #profile {
-  width: 35%;
-  object-fit: contain;
+  width: 40%;
+  height: 100%;
+  margin: 0;
+
+  padding-top: 2.5rem;
+}
+
+#profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #about {
-  width: 60%;
+  width: 55%;
 }
 
 @media (max-width: 800px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+
   #about {
     width: 100%;
+  }
+
+  #profile {
+    width: 100%;
+  }
+
+  #profile img {
+    width: 100%;
+    aspect-ratio: 3/1;
   }
 }
