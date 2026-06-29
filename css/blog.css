@@ -3,6 +3,16 @@ body {
   overflow-x: hidden;
 }
 
+.hero {
+  margin: 0px;
+
+  background-image: url("/assets/hero.webp");
+  background-size: cover;
+
+  max-width: 600px;
+  aspect-ratio: 6/1;
+}
+
 .listheading {
   font-size: 1.1rem;
 
