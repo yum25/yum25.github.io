@@ -1,13 +1,4 @@
 <svg>
-  <filter id="watercolor">
-    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="5" />
-    <feColorMatrix
-      values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 -0.9 1.2"
-      result="texture"
-    />
-    <feComposite in="SourceGraphic" in2="texture" operator="in" />
-  </filter>
-
   <filter id="squiggly">
     <feTurbulence
       id="turbulence"
@@ -22,33 +13,5 @@
       in2="noise"
       scale="3"
     />
-  </filter>
-
-  <filter id="paper-squiggly">
-    <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
-    <feDisplacementMap
-      in="SourceGraphic"
-      in2="noise"
-      scale="3"
-      result="squiggly"
-    />
-
-    <feTurbulence
-      type="fractalNoise"
-      baseFrequency="0.02"
-      numOctaves="5"
-      result="paperNoise"
-    />
-    <feDiffuseLighting
-      in="paperNoise"
-      lighting-color="white"
-      surfaceScale="8"
-      result="paperLight"
-    >
-      <feDistantLight azimuth="45" elevation="60" />
-    </feDiffuseLighting>
-
-    <feColorMatrix in="paperLight" type="luminanceToAlpha" result="paperMask" />
-    <feComposite in="squiggly" in2="paperMask" operator="in" />
   </filter>
 </svg>
