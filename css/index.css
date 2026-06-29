@@ -130,8 +130,9 @@ figcaption a {
     font-size: 2.2rem;
   }
 
+  #intro,
   #about {
-    width: 100%;
+    width: min(500px, 100%);
   }
 
   #profile {
