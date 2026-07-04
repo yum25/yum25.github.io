@@ -1,9 +1,10 @@
 :root {
-  --var-primary-color-theme: rgb(255, 255, 255);
+  --var-primary-color-theme: rgb(250, 249, 246);
   --var-secondary-color-theme: rgb(186, 186, 186);
-  --var-primary-text-color-theme: rgb(27, 27, 27);
+  --var-primary-text-color-theme: rgb(25, 25, 25);
   --var-secondary-text-color-theme: rgb(62, 62, 62);
 
+  --var-hero-text-color: #8bc462;
   --var-card-width: 450px;
 }
 
@@ -35,7 +36,7 @@ body {
   filter: url("#squiggly");
   font-family: sans-serif;
 
-  color: #8bc462;
+  color: var(--var-hero-text-color);
 }
 
 i {
@@ -43,11 +44,6 @@ i {
 }
 
 @media (max-width: 500px) {
-  html,
-  body {
-    font-size: 16px;
-  }
-
   body {
     padding: 2rem 1rem;
   }
@@ -55,9 +51,9 @@ i {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --var-primary-color-theme: rgb(27, 27, 27);
+    --var-primary-color-theme: rgb(25, 25, 25);
     --var-secondary-color-theme: rgb(75, 75, 75);
-    --var-primary-text-color-theme: lightgray;
+    --var-primary-text-color-theme: rgb(250, 249, 246);
     --var-secondary-text-color-theme: rgb(183, 183, 183);
   }
 }
