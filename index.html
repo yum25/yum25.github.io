@@ -8,7 +8,6 @@
     <section id="intro">
         <header>
             <figure id="profile">
-                <small id="hero-decorator">yum25.github.io</small>
                 <figcaption>
                     <a href="https://en.wikipedia.org/wiki/Ordered_dithering"
                        target="_blank"
@@ -25,7 +24,9 @@
                 </p>
                 <p>
                     Previously, I did engineering at
-                    <a href="https://www.nytimes.com" target="_blank" rel="noreferrer">The New York Times Games</a>,
+                    <a href="https://www.nytimes.com/crosswords"
+                       target="_blank"
+                       rel="noreferrer">The New York Times Games</a>,
                     <a href="https://www.michigandaily.com" target="_blank" rel="noreferrer">The Michigan Daily</a>,
                     <a href="https://www.detroitography.com"
                        target="_blank"
@@ -65,32 +66,39 @@
             <h2 class="subheading">console.blog</h2>
             <p class="descriptor">My informal tech blog/devlog where I reflect on what I've been working on.</p>
             <ul>
-                <li class="log"></li>
+                <li class="log">
+                    <div class="metadata">
+                        <time>July 5, 2026</time>
+                    </div>
+                    <p class="title">On Coding to Live, and Living to Code</p>
+                    <p class="descriptor">My complex relationship with the craft I've chosen to be my career.</p>
+                </li>
+                <li class="log">
+                    <div class="metadata">
+                        <time>July 5, 2026</time>
+                    </div>
+                    <p class="title">Building Strands Statistics and Streaks</p>
+                    <p class="descriptor">A NYT internship retrospective</p>
+                </li>
             </ul>
         </section>
         <section>
-            <h2 class="subheading">Full-stack Engineering</h2>
+            <h2 class="subheading">projects, projects, and projects</h2>
+            <p class="descriptor">
+                My public facing work, which spans everything from <b>full-stack product/feature engineering</b>
+                to <b>web and interactive design</b>, <b>tooling</b> and <b>data visuals</b>.
+            </p>
             <ul>
                 {% for project in fullstack %}
-                    {{ components.projectCard(project) }} {%
-                    endfor %}
-                </ul>
-            </section>
-            <section>
-                <h2 class="subheading">Web Design</h2>
-                <ul>
-                    {% for project in webdesign %}
-                        {{ components.projectCard(project) }} {%
-                        endfor %}
-                    </ul>
-                </section>
-                <section>
-                    <h2 class="subheading">Data Visualization</h2>
-                    <ul>
-                        {% for project in dataviz %}
-                            {{ components.projectCard(project) }} {%
-                            endfor %}
-                        </ul>
-                    </section>
-                </main>
-            {% endblock %}
+                    {{ components.projectCard(project) }}
+                {% endfor %}
+                {% for project in webdesign %}
+                    {{ components.projectCard(project) }}
+                {% endfor %}
+                {% for project in dataviz %}
+                    {{ components.projectCard(project) }}
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+{% endblock %}

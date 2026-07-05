@@ -10,17 +10,46 @@ body {
   background-size: cover;
 
   max-width: 600px;
-  aspect-ratio: 6/1;
+  min-height: 100px;
+}
+
+nav {
+  max-width: 600px;
+}
+
+header {
+  padding-bottom: 1.5rem;
+}
+
+.metadata {
+  text-transform: uppercase;
+  color: var(--var-secondary-text-color-theme);
+}
+
+.metadata time {
+  font-weight: 700;
+}
+
+.heading {
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0px;
+}
+
+.descriptor {
+  color: var(--var-secondary-text-color-theme);
+  border-left: 2px solid var(--var-secondary-text-color-theme);
+  padding-left: 1rem;
 }
 
 .listheading {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 
   -webkit-filter: url("#squiggly");
   filter: url("#squiggly");
   font-family: sans-serif;
 
-  color: #8bc462;
+  color: var(--var-hero-text-color);
 }
 
 .listheading::before {
@@ -32,13 +61,16 @@ body {
   display: grid;
   grid-auto-flow: column;
   position: relative;
+
+  margin-top: -1rem;
+  margin-bottom: -1rem;
 }
 
 .blog-image {
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: -15.5rem;
+  margin-right: -20.25rem;
 
   z-index: 1;
 }
@@ -47,14 +79,14 @@ body {
   border-left: 2px solid gray;
   font-size: 0.85rem;
 
-  width: 15rem;
+  width: 20rem;
   box-sizing: border-box;
   padding: 5px 1rem;
 
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: -15.5rem;
+  margin-right: -20.25rem;
 
   z-index: 1;
 
@@ -67,8 +99,8 @@ body {
 
 .blog-image img {
   object-fit: cover;
-  max-width: 15rem;
-  max-height: 15rem;
+  max-width: 20rem;
+  max-height: 20rem;
 
   border-radius: 5px;
 }
@@ -98,10 +130,10 @@ body {
 
   .blog-image:hover,
   .blog-aside:hover {
-    transform: translateX(-14rem);
+    transform: translateX(-19.25rem);
   }
 
   .blog-aside-container:has(.ref:hover) .blog-aside {
-    transform: translateX(-14rem);
+    transform: translateX(-19.25rem);
   }
 }

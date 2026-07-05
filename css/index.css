@@ -1,5 +1,8 @@
+nav {
+  width: 90%;
+}
+
 #intro {
-  margin-top: 1rem;
   margin-bottom: 2.5rem;
   padding: 1rem;
 }
@@ -7,25 +10,27 @@
 header {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  gap: 3rem;
 }
 
 .heading {
-  font-size: 3rem;
   font-style: italic;
-  color: var(--var-hero-text-color);
 }
 
 .subheading,
 .descriptor {
   padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 10px 0px;
+}
+
+.descriptor b {
+  font-style: italic;
 }
 
 a {
   color: cornflowerblue;
   text-decoration: none;
-  font-family: sans-serif;
-  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -56,7 +61,7 @@ menu > li > a {
 }
 
 menu > li:hover {
-  background: #8bc462;
+  background: var(--var-hero-text-color);
   color: rgb(27, 27, 27);
 }
 
@@ -94,16 +99,10 @@ article > p {
   border: 1px solid black;
 }
 
-#hero-decorator {
-  display: none;
-  color: var(--var-hero-text-color);
-  font-family: sans-serif;
-}
-
 #profile {
   width: 40%;
   margin: 0;
-  margin-top: 2rem;
+  margin-top: 5px;
 
   position: relative;
 
@@ -114,8 +113,8 @@ article > p {
 
 figcaption {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 3px;
+  right: 0px;
 }
 
 figcaption a {
@@ -124,7 +123,7 @@ figcaption a {
 }
 
 #about {
-  width: 55%;
+  width: 50%;
 }
 
 @media (max-width: 800px) {
@@ -137,10 +136,10 @@ figcaption a {
   }
 
   .heading {
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 4rem;
   }
 
+  nav,
   #intro,
   .subheading,
   .descriptor,
@@ -150,20 +149,19 @@ figcaption a {
     max-width: 500px;
   }
 
+  nav,
   #about {
     width: 100%;
   }
 
-  #hero-decorator {
-    display: block;
-    text-align: center;
-
-    margin-top: -1.1rem;
-  }
-
   #profile {
-    width: min(175px, 100%);
-    aspect-ratio: 1/1;
-    margin: 0 auto;
+    width: 100%;
+    aspect-ratio: 3/1;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 3.5rem;
   }
 }

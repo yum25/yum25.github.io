@@ -12,6 +12,11 @@
         <title>{% block title %}Marie Yu{% endblock %}</title>
     </head>
     <body>
+        <nav>
+            <p>
+                <a href="/">yum25.github.io</a><span>//</span><a href="/blog">console.blog</a>
+            </p>
+        </nav>
         {% block content %}{% endblock %}
     </body>
     {% include "components/filters.html" %}

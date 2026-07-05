@@ -1,27 +1,73 @@
 :root {
-  --var-primary-color-theme: rgb(250, 249, 246);
+  --var-primary-color-theme: rgb(240, 239, 236);
   --var-secondary-color-theme: rgb(226, 226, 226);
   --var-primary-text-color-theme: rgb(25, 25, 25);
-  --var-secondary-text-color-theme: rgb(62, 62, 62);
+  --var-secondary-text-color-theme: rgb(122, 122, 122);
 
-  --var-hero-text-color: #8bc462;
+  --var-hero-text-color: rgb(86, 130, 3);
   --var-card-width: 450px;
 }
 
 html,
 body {
-  font-size: 20px;
-
   background: var(--var-primary-color-theme);
+
   color: var(--var-primary-text-color-theme);
+  font-size: 16px;
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.4;
 }
 
 body {
-  padding: 4rem 2rem;
+  padding: 2rem;
 
   max-width: 1100px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+
+  box-sizing: border-box;
+  padding: 0px 1rem;
+}
+
+nav span {
+  color: var(--var-secondary-text-color-theme);
+  padding: 0px 5px;
+}
+
+nav a {
+  color: var(--var-hero-text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover::before {
+  content: "[";
+}
+
+nav a:hover::after {
+  content: "]";
+}
+
+.heading {
+  font-family: serif;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 80%;
+
+  color: var(--var-hero-text-color);
+  margin-top: 10px;
+  margin-bottom: 2.5rem;
 }
 
 .warped {
@@ -30,12 +76,9 @@ body {
 }
 
 .subheading {
-  font-size: 1.25rem;
-
+  font-size: 1.5rem;
   -webkit-filter: url("#squiggly");
   filter: url("#squiggly");
-  font-family: sans-serif;
-
   color: var(--var-hero-text-color);
 }
 
@@ -47,6 +90,10 @@ i {
   body {
     padding: 2rem 1rem;
   }
+
+  .heading {
+    font-size: 3.5rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,5 +102,7 @@ i {
     --var-secondary-color-theme: rgb(60, 60, 60);
     --var-primary-text-color-theme: rgb(210, 209, 206);
     --var-secondary-text-color-theme: rgb(183, 183, 183);
+
+    --var-hero-text-color: #8bc462;
   }
 }

@@ -5,8 +5,10 @@
 {% block title %}Building Strands Statistics and Streaks{% endblock %}
 {% block article %}
     <main style="max-width: 600px;">
-        <h1 class="subheading">Building Strands Statistics and Streaks</h1>
-        <i>A NYT internship retrospective</i>
+        <header>
+            <h1 class="heading">Building Strands Statistics and Streaks</h1>
+            <p class="descriptor">A NYT internship retrospective</p>
+        </header>
         <p>
             In the Summer of 2025, I was an intern at NYT Games. During that
             time, I contributed to pushing out the Strands Stats and Streaks
@@ -56,12 +58,36 @@
                 into production?</span>
             </p>
             <aside id="note-1" class="blog-aside" aria-labelledby="ref-1">
-                Granted, I wasn't totally clueless - I was familiar with some deployment patterns, such as using a dev branch
+                I say that in a more tongue in cheek way. I was familiar with some deployment patterns, such as using a dev branch
                 and a more protected main branch.
             </aside>
         </div>
         <h3 class="listheading">Unit Testing</h3>
-        <p></p>
+        <p>
+            The next obstacle was unit testing. I was somewhat familiar with unit testing in frontend codebases, however not in any
+            robust way. On smaller, leaner teams this is acceptable - a lot of testing I did came from manual testing and dogfooding.
+            This was relatively okay on a smaller scale, especially with a team that cares about quality while manually testing.
+        </p>
+        <p>
+            However, consider a larger codebase where many engineers are constantly merging new code. This loosey goosey method of
+            testing is not as reliable anymore, and increases the risk of regressions.
+        </p>
+        <p>
+            Overall, writing unit tests was relatively straightforward but took some getting used to. Particularly, user state had to
+            be mocked in unique ways, and components had to be mocked and tested for a variety of user states. Our team also
+            used Storybook, which increased the complexity of adding new features but ensured that any version of the component,
+            even conditional UI that is hard to come across in the wild (error screens, uncommon user data) could be tested and verified.
+        </p>
+        <p>
+            Something clicked for me on the benefits of testing here, where I realized that tests weren't just a sanity check but a
+            form of procedural documentation on how the code is supposed to work. Someone should be able to read your tests and
+            understand how your code is intended to behave.
+        </p>
+        <h3 class="listheading">Ship It!</h3>
+        <p>
+            At last, after completing the feature, wrapping it in a feature flag, writing up tests and then passing the feature through
+            quality assurance I had merged in my first ticket. What an exhilirating feeling it was!
+        </p>
     </h2>
     <h2 class="subheading">Congrats</h2>
     <div class="blog-aside-container">
@@ -83,8 +109,8 @@
             <p>
                 For the Strands completion screen, I added a display where the player can see a row of their statistics
                 on Strands. This completion screen is dynamic based on the user state of the player. For example, if the player
-                is not registered, instead of displaying statistics, we display a registration CTA which encourages players to
-                register to see their unique statistics.
+                is not registered, instead of displaying statistics, we nudge the user to register an account
+                to see their unique statistics.
             </p>
             <p>
                 The completion screen was especially fun since I got to design my own component! We didn't have an existing
@@ -94,8 +120,19 @@
     </div>
     <h2 class="subheading">Modal</h2>
     <p>
-        I added a dismissable message that notifies players about the new Strands stats feature.
-        This message uses local storage to ensure the user sees the message at least twice before it disappears.
+        Next was a dismissable message that notifies players about the new Strands stats feature. The way this
+        component actually works is quite interesting - it uses local storage to ensure the user sees
+        the message at least twice before it disappears.
+    </p>
+    <p>
+        Both in this internship and my previous experiences I've learned how useful browser storage can be.
+        For simple uses such as this one where we want a lightweight storage per user, we can use browser storage.
+        However, even persistent state such as a user's winning streaks are stored in browser storage.
+    </p>
+    <p>
+        Browser storage can act as a sort of read and write cache. Consider situations where network conditions fail or
+        user data is not saved properly. Saving to browser storage first gives us a local, almost instant method of tracking a
+        user's progress on a game and deferring database writes when within suboptimal network conditions.
     </p>
     <h2 class="subheading">Pipeline</h2>
     <p>
