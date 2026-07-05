@@ -27,6 +27,10 @@ header {
   margin: 10px 0px;
 }
 
+.descriptor {
+  width: 90%;
+}
+
 .descriptor b {
   font-style: italic;
 }
@@ -136,10 +140,17 @@ figcaption a {
 
   header {
     flex-flow: column nowrap;
+    gap: 1.5rem;
   }
 
   .heading {
     font-size: 4rem;
+  }
+
+  nav,
+  .descriptor,
+  #about {
+    width: unset;
   }
 
   nav,
@@ -150,11 +161,6 @@ figcaption a {
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
-  }
-
-  nav,
-  #about {
-    width: 100%;
   }
 
   #profile {
