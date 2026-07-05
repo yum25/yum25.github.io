@@ -69,7 +69,7 @@ menu > li > a {
 
 menu > li:hover {
   background: var(--var-hero-text-color);
-  color: rgb(27, 27, 27);
+  color: var(--var-primary-color-theme);
 }
 
 ul {
