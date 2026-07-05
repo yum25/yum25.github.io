@@ -14,7 +14,10 @@ header {
 }
 
 .heading {
+  font-size: 5rem;
   font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 2.5rem;
 }
 
 .subheading,

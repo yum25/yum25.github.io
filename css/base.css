@@ -62,12 +62,9 @@ nav a:hover::after {
 .heading {
   font-family: serif;
   font-weight: 500;
-  font-size: 5rem;
   line-height: 80%;
 
   color: var(--var-hero-text-color);
-  margin-top: 10px;
-  margin-bottom: 2.5rem;
 }
 
 .warped {
