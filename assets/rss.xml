@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>console.log</title>
+    <title>console.blog</title>
     <link>https://yum25.github.io</link>
-    <description>Latest articles from console.log</description>
+    <description>Latest articles from console.blog</description>
 
     {% for article in articles %}
     {% if article.path %}
