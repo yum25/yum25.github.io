@@ -62,7 +62,7 @@ nav a:hover::after {
 .heading {
   font-family: serif;
   font-weight: 500;
-  line-height: 80%;
+  line-height: 0.9;
 
   color: var(--var-hero-text-color);
 }
@@ -77,6 +77,15 @@ nav a:hover::after {
   -webkit-filter: url("#squiggly");
   filter: url("#squiggly");
   color: var(--var-hero-text-color);
+}
+
+.metadata {
+  text-transform: uppercase;
+  color: var(--var-secondary-text-color-theme);
+}
+
+.metadata time {
+  font-weight: 700;
 }
 
 i {

@@ -1,6 +1,7 @@
 import nunjucks from "nunjucks";
-import { readFileSync } from "node:fs";
 import { resolve } from "path";
+
+import { load } from "./preprocessing/_shared";
 
 function nunjucksPlugin() {
   return {
@@ -8,12 +9,13 @@ function nunjucksPlugin() {
     transformIndexHtml: {
       order: "pre",
       handler(html, ctx) {
-        const data = JSON.parse(
-          readFileSync("./content/projects.json", "utf-8"),
+        const data = load(ctx);
+        const env = nunjucks.configure(".", { autoescape: true });
+        env.addFilter("published", (articles) =>
+          articles.filter((article) => article.path),
         );
-
-        nunjucks.configure(".", { autoescape: true });
-        return nunjucks.renderString(html, data);
+        env.addFilter("limit", (articles, limit) => articles.slice(0, limit));
+        return env.renderString(html, data);
       },
     },
   };
@@ -26,7 +28,6 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        strands: resolve(__dirname, "blog/strands.html"),
       },
     },
   },

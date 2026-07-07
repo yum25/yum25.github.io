@@ -1,4 +1,5 @@
-{% import "components/project.html" as components %}
+{% import "components/project.html" as project %}
+{% import "components/article.html" as article %}
 {% extends "layouts/base.html" %}
 {% block head %}
     <link rel="stylesheet" href="/css/index.css" />
@@ -62,24 +63,13 @@
         </header>
     </section>
     <main>
-        <section style="display: none;">
+        <section>
             <h2 class="subheading">console.blog</h2>
             <p class="descriptor">My informal tech blog/devlog where I reflect on what I've been working on.</p>
-            <ul>
-                <li class="log">
-                    <div class="metadata">
-                        <time>July 5, 2026</time>
-                    </div>
-                    <p class="title">On Coding to Live, and Living to Code</p>
-                    <p class="descriptor">My complex relationship with the craft I've chosen to be my career.</p>
-                </li>
-                <li class="log">
-                    <div class="metadata">
-                        <time>July 5, 2026</time>
-                    </div>
-                    <p class="title">Building Strands Statistics and Streaks</p>
-                    <p class="descriptor">A NYT internship retrospective</p>
-                </li>
+            <ul class="blog">
+                {% for data in articles | published | limit(4) %}
+                    {{ article.card(data) }}
+                {% endfor %}
             </ul>
         </section>
         <section>
@@ -88,15 +78,15 @@
                 A collection of my public facing work, which spans everything from <b>full-stack product and feature engineering</b>
                 to <b>web and interactive design</b>, <b>internal tooling</b> and <b>data visuals</b>.
             </p>
-            <ul>
-                {% for project in fullstack %}
-                    {{ components.projectCard(project) }}
+            <ul class="projects">
+                {% for data in projects.fullstack %}
+                    {{ project.card(data) }}
                 {% endfor %}
-                {% for project in webdesign %}
-                    {{ components.projectCard(project) }}
+                {% for data in projects.webdesign %}
+                    {{ project.card(data) }}
                 {% endfor %}
-                {% for project in dataviz %}
-                    {{ components.projectCard(project) }}
+                {% for data in projects.dataviz %}
+                    {{ project.card(data) }}
                 {% endfor %}
             </ul>
         </section>

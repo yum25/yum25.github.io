@@ -1,0 +1,13 @@
+{% macro card(article) %}
+<a href="{{ article.path }}">
+  <li class="log">
+    <div class="metadata">
+      <time>{{ article.date }}</time>
+    </div>
+    <div>
+      <p class="title">{{ article.title }}</p>
+      <p class="tagline">{{ article.tagline }}</p>
+    </div>
+  </li>
+</a>
+{% endmacro %}

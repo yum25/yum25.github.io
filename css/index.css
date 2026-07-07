@@ -72,7 +72,56 @@ menu > li:hover {
   color: var(--var-primary-color-theme);
 }
 
-ul {
+.blog {
+  padding: 0px;
+  border: 2px solid var(--var-secondary-color-theme);
+}
+
+.blog a {
+  text-decoration: none;
+  font-weight: unset;
+}
+
+.log {
+  list-style: none;
+  display: flex;
+
+  padding: 1rem;
+  gap: 1rem;
+  background: var(--var-secondary-color-theme);
+}
+
+.log:hover {
+  background: var(--var-primary-color-theme);
+}
+
+.log div:last-child {
+  border-left: 2px solid var(--var-secondary-text-color-theme);
+  padding-left: 1rem;
+}
+
+.metadata {
+  min-width: 10rem;
+  text-align: end;
+}
+
+.title {
+  font-family: serif;
+  font-size: 2rem;
+  color: var(--var-hero-text-color);
+
+  line-height: 1;
+  margin: 0px;
+}
+
+.tagline {
+  padding: 0px;
+  margin: 0px;
+
+  color: var(--var-secondary-text-color-theme);
+}
+
+.projects {
   padding: 0;
   list-style: none;
 
@@ -166,6 +215,10 @@ figcaption a {
   #profile {
     width: 100%;
     aspect-ratio: 3/1;
+  }
+
+  .metadata {
+    min-width: unset;
   }
 }
 

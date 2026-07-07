@@ -17,17 +17,12 @@ nav {
   max-width: 600px;
 }
 
+main {
+  max-width: 600px;
+}
+
 header {
   padding-bottom: 1.5rem;
-}
-
-.metadata {
-  text-transform: uppercase;
-  color: var(--var-secondary-text-color-theme);
-}
-
-.metadata time {
-  font-weight: 700;
 }
 
 .heading {
