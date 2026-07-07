@@ -1,7 +1,8 @@
 import nunjucks from "nunjucks";
-import { resolve } from "path";
+import { parse, resolve } from "path";
 
 import { load } from "./preprocessing/_shared";
+import articles from "./content/articles.json";
 
 function nunjucksPlugin() {
   return {
@@ -21,6 +22,15 @@ function nunjucksPlugin() {
   };
 }
 
+const article = Object.assign(
+  ...articles
+    .filter((entry) => entry.path)
+    .map((entry) => parse(entry.path))
+    .map(({ name, base }) => ({
+      [name]: resolve(__dirname, `blog/${base}`),
+    })),
+);
+
 export default {
   plugins: [nunjucksPlugin()],
   base: "/",
@@ -28,6 +38,8 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        blog: resolve(__dirname, "blog/index.html"),
+        ...article,
       },
     },
   },
