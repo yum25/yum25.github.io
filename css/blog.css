@@ -100,16 +100,24 @@ header {
   border-radius: 5px;
 }
 
+.ref {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: gray;
+}
+
 .ref:after {
-  content: " •";
+  content: "•";
+  color: gray;
+}
+
+.ref:hover:after {
   color: orange;
 }
 
 .ref:hover,
 .blog-aside-container:has(.blog-aside:hover) .ref {
-  text-decoration: underline;
   text-decoration-color: orange;
-  text-decoration-thickness: 2px;
 }
 
 .blog-aside:hover,

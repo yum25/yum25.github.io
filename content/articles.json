@@ -1,8 +1,39 @@
 [
   {
+    "title": "The Puzzle Game That Got Me an Internship",
+    "date": "July 7, 2026",
+    "tagline": "Behind the scenes of building The Michigan Daily <b>Links</b>, which lead me to The New York Times"
+  },
+  {
+    "title": "DevLog 003: Coming up with piping-bag",
+    "date": "July 7, 2026",
+    "tagline": "Brainstorming lightweight data streaming solutions"
+  },
+  {
+    "title": "Reinventing The Michigan Daily Mobile App",
+    "date": "July 7, 2026",
+    "tagline": "The struggles of mobile-web integration"
+  },
+  {
+    "title": "DevLog 002: Dithering Your Images",
+    "date": "July 7, 2026",
+    "tagline": "Procedural techniques for adding spice to your images (and reducing their size)"
+  },
+  {
+    "title": "DevLog 001: Optimizing Your Images",
+    "date": "July 7, 2026",
+    "tagline": "Things to keep in mind for your own portfolio site"
+  },
+  {
     "title": "On Coding to Live, and Living to Code",
     "date": "July 5, 2026",
     "tagline": "My complex relationship with the craft I've chosen to be my career"
+  },
+  {
+    "title": "The Beginnings of console.blog",
+    "date": "July 7, 2026",
+    "path": "/blog/beginnings.html",
+    "tagline": "Some trepidation at starting a public facing technical blog"
   },
   {
     "title": "Building Strands Statistics and Streaks",
