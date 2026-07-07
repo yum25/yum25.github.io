@@ -1,0 +1,18 @@
+{% import "components/article.html" as article %}
+{% extends "layouts/base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="/css/index.css" />
+{% endblock %}
+{% block content %}
+    <main style="max-width: 900px;">
+        <header style="gap: 0rem; padding: 1rem;">
+            <h1 class="heading" style="margin: 5px;">console.blog</h1>
+            <p style="margin: 5px;">My informal tech blog/devlog where I reflect on what I've been working on.</p>
+        </header>
+        <ul class="blog">
+            {% for data in articles | published | limit(4) %}
+                {{ article.card(data) }}
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}

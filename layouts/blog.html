@@ -2,7 +2,7 @@
 {% block head %}
     <link rel="stylesheet" href="/css/blog.css" />
 {% endblock %}
-{% block title %}{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
 {% block content %}
     <header>
         <figure class="hero">
@@ -12,10 +12,16 @@
         <small>
             <span>console.blog</span>
             <span>//</span>
-            <time>July 5, 2026</time>
+            <time>{{ article.date }}</time>
         </small>
     </section>
-    {% block article %}{% endblock %}
+    <main>
+        <header>
+            <h1 class="heading">{{ article.title }}</h1>
+            <p class="descriptor">{{ article.tagline }}</p>
+        </header>
+        {% block article %}{% endblock %}
+    </main>
     <footer>
         <figure class="hero">
         </figure>
