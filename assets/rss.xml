@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>console.log</title>
+    <link>https://yum25.github.io</link>
+    <description>Latest articles from console.log</description>
+
+    {% for article in articles %}
+    {% if article.path %}
+    <item>
+      <title>{{ article.title }}</title>
+      <link>https://yum25.github.io{{ article.path }}</link>
+      <guid>{{ article.path }}</guid>
+      <pubDate>{{ article.date | rss_date }}</pubDate>
+      <description>{{ article.description }}</description>
+    </item>
+    {% endif %}
+    {% endfor %}
+
+  </channel>
+</rss>
