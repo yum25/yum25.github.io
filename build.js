@@ -24,10 +24,10 @@ async function main() {
   env.addFilter("rss_date", (date) => new Date(date).toUTCString());
 
   const rss = env.renderString(
-    readFileSync("./assets/rss.xml").toString(),
+    readFileSync("./assets/feed.xml").toString(),
     data,
   );
-  writeFileSync("./public/rss.xml", rss);
+  writeFileSync("./public/feed.xml", rss);
 }
 
 await main();
