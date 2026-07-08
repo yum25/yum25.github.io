@@ -59,6 +59,19 @@ nav a:hover::after {
   content: "]";
 }
 
+a {
+  color: cornflowerblue;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+}
+
 .heading {
   font-family: serif;
   font-weight: 500;

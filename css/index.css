@@ -35,19 +35,6 @@ header {
   font-style: italic;
 }
 
-a {
-  color: cornflowerblue;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 2px;
-  font-weight: 600;
-}
-
 menu {
   margin: 0;
   padding: 0;
