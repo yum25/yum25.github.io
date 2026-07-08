@@ -22,6 +22,9 @@ async function main() {
   const data = load();
   const env = nunjucks.configure(".", { autoescape: true });
   env.addFilter("rss_date", (date) => new Date(date).toUTCString());
+  env.addFilter("published", (articles) =>
+    articles.filter((article) => article.path),
+  );
 
   const rss = env.renderString(
     readFileSync("./assets/feed.xml").toString(),
