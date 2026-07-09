@@ -3,7 +3,7 @@
     <p>
         Something I recently came across while revamping this personal site of mine was dealing with assets
         <i>(most commonly, images)</i>. After working on my own site, I've noticed that within a lot of portfolio sites,
-        assets are treated as an afterthought. This was definitely the case for me - it's easy to just take a screenshot of
+        assets are treated as an afterthought. This was definitely the case for me – it's easy to just take a screenshot of
         something as an image preview, throw it into your assets folder, and focus on the more involved aspects of coding up your website.
     </p>
     <p>
@@ -19,10 +19,25 @@
         resolution image they got from their phone).
         I myself made these mistakes as well.
     </p>
-    <p>So what can we do about it?</p>
+    <p>
+        It seems it's not just me then. This is a common problem across developers that in mild cases ships a few extra <b>MB</b> of data to
+        their unsuspecting audience, and at the worst case, actively stifles their website's performance and experience. Those first few seconds
+        of loading is important – the first 1 to 2 seconds, many have already left your page. And as the website continues buffering, more and more hop off.
+    </p>
+    <p>
+        This is especially a <b><i>no-no</i></b> on a portfolio site, where long load times could give the wrong impression of your engineering
+        skills. All because you didn't do the trivial, easy step of trimming down your image size a little. :(
+    </p>
+    <p>I hope I've been able to impress upon the importance of properly optimizing your images on your website! So what can we do about it?</p>
     <h2 class="subheading">Resize your images</h2>
-    <h2 class="subheading">Use .webp or .avif</h2>
+    <p>
+        Most of the times, your image does not need to be that big. Take
+        <a href="/" style="color: var(--var-hero-text-color)">this website you're on</a>, for
+        example. The image cards you see in these blogs and in my project cards don't exceed <b>500 pixels</b>. Meanwhile, taking a screenshot of my
+        laptop screen (I just did it) gives me around a <b>2900 x 1800 pixel</b> image.
+    </p>
     <h2 class="subheading">The srcset attribute and placeholders</h2>
+    <h2 class="subheading">Use .webp or .avif</h2>
     <h2 class="subheading">Um, ok. So how do I actually do all of this?</h2>
     <h2 class="subheading">Understanding your build process</h2>
     <h2 class="subheading">Trimming bloat in other places</h2>
