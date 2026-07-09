@@ -79,13 +79,7 @@
                 to <b>web and interactive design</b>, <b>internal tooling</b> and <b>data visuals</b>.
             </p>
             <ul class="projects">
-                {% for data in projects.fullstack %}
-                    {{ project.card(data) }}
-                {% endfor %}
-                {% for data in projects.webdesign %}
-                    {{ project.card(data) }}
-                {% endfor %}
-                {% for data in projects.dataviz %}
+                {% for data in projects %}
                     {{ project.card(data) }}
                 {% endfor %}
             </ul>
