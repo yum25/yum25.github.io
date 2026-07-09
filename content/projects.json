@@ -35,6 +35,13 @@
     "description": "A fun visualization of Sappho's Fragments translated by Anne Carson in <i>If Not, Winter</i>, categorized using a machine learning algorithm."
   },
   {
+    "title": "Love Notes 2024",
+    "link": "https://specials.michigandaily.com/2024/love-notes/",
+    "video": "assets/lovenotes.mp4",
+    "alt": "Love Notes 2024",
+    "description": "A website for The Michigan Daily Statement Love Edition, displaying love notes sent between students."
+  },
+  {
     "title": "Live Election Trackers 2024",
     "link": "https://yum25.github.io/a2-election-vizs/",
     "img": "assets/election-viz.webp",
@@ -61,12 +68,5 @@
     "img": "assets/opinion-elections.webp",
     "alt": "Opinion Elections",
     "description": "A website for The Michigan Daily Opinion endorsements, editorials, commentary and data graphics"
-  },
-  {
-    "title": "Love Notes 2024",
-    "link": "https://specials.michigandaily.com/2024/love-notes/",
-    "video": "assets/lovenotes.mp4",
-    "alt": "Love Notes 2024",
-    "description": "A website for The Michigan Daily Statement Love Edition, displaying love notes sent between students."
   }
 ]
