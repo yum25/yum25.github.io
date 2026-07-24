@@ -66,8 +66,8 @@
     <p>
         Overall, writing unit tests was relatively straightforward but took some getting used to. Particularly, user state had to
         be mocked in unique ways, and components had to be mocked and tested for a variety of user states. Our team also
-        used Storybook, which increased the complexity of adding new features but ensured that any version of the component,
-        even conditional UI that is hard to come across in the wild (error screens, uncommon user data) could be tested and verified.
+        used <b>Storybook</b>, which increased the complexity of adding new features but ensured that any version of the component,
+        even conditional UI that is hard to come across in the wild <i>(error screens, uncommon user data)</i> could be tested and verified.
     </p>
     <p>
         Something clicked for me on the benefits of testing here, where I realized that tests weren't just a sanity check but a
@@ -127,9 +127,21 @@
 </p>
 <h2 class="subheading">Pipeline</h2>
 <p>
-    Lastly, was displaying the statistics themselves. Collaborating with other engineers on this task,
+    Lastly, was storing and displaying the statistics themselves. Collaborating with other engineers on this task,
     I learned how we store and track player statistics through a Golang pipeline to a database, incrementing stats such
-    as "Spangram Firsts" and "No Hints" when the player enters the Strands player or finishes a puzzle.
+    as <b><i>Spangram First</i></b> and <b><i>No Hints</i></b> when the player enters the Strands player or finishes a puzzle.
+</p>
+<p>
+    While the operations on this database were not particularly complex, reconciling between different player state updates
+    is what introduced complexity to this pipeline - we send a <span class="code-snippet">POST</span> request upon
+    entering a game and upon game completion, allowing us to keep track and update player state between devices.
+</p>
+<p>
+    This also means deduplicating any player statistics we want to store. For example, when we receive a
+    <span class="code-snippet">POST</span> request and see that the player has successfully completed a <b>puzzle using no hints</b>,
+    we need to verify the previous player state, (that being an <b>unfinished puzzle with no hints</b>) before incrementing the number
+    of puzzles the player has completed without using any hints and displaying it. These edge cases made the
+    process of writing and unit testing player state storage much more interesting than just incrementing a number.
 </p>
 <h2 class="subheading">My Secret Second Thing</h2>
 <p>Under Construction</p>
