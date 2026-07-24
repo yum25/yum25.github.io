@@ -12,13 +12,19 @@
         If you're not careful, your images can overexceed that by <b><i>tens to hundreds of times</i></b>, and often it doesn't have to be that
         way.
     </p>
-    <p>
-        Sometimes while updating my site I like to look through other dev portfolios from people at a similar stage as me in their careers
-        for inspiration. One website I came across loaded <b>~40 MB</b> upon the first page load and took <b>15+ seconds</b> to load the
-        main portfolio page. Other portfolios had decent page load times, but still served images in the <b>MB</b> range (likely a high
-        resolution image they got from their phone).
-        I myself made these mistakes as well.
-    </p>
+    <div class="blog-aside-container">
+        <p>
+            Sometimes while updating my site I like to look through other dev portfolios from people at a similar stage as me in their careers
+            for inspiration. <span id="ref-1" class="ref"  aria-describedby="note-1">One website I came across loaded <b>~40 MB</b></span>
+            upon the first page load and took <b>15+ seconds</b> to load the main portfolio page. Other portfolios had decent page load times,
+            but still served images in the <b>MB</b> range (likely a high resolution image they got from their phone). I myself made these mistakes as well.
+        </p>
+        <aside id="note-1" class="blog-aside" aria-labelledby="ref-1">
+            This figure may be a bit misleading. There are websites that ship this much data that actually run quite well! The key difference
+            is that the <b>40 MB</b> is loaded <i>at once</i>, meaning that rather loading it in the background, you can't see any content on the webpage
+            until all of those megabytes are fetched.
+        </aside>
+    </div>
     <p>
         It seems it's not just me then. This is a common problem across developers that in mild cases ships a few extra <b>MB</b> of data to
         their unsuspecting audience, and at the worst case, actively stifles their website's performance and experience. Those first few seconds
@@ -34,9 +40,36 @@
         Most of the times, your image does not need to be that big. Take
         <a href="/" style="color: var(--var-hero-text-color)">this website you're on</a>, for
         example. The image cards you see in these blogs and in my project cards don't exceed <b>500 pixels</b>. Meanwhile, taking a screenshot of my
-        laptop screen (I just did it) gives me around a <b>2900 x 1800 pixel</b> image.
+        laptop screen (I just did it) gives me around a <b>2900 x 1800 pixel</b> image. This means if you're taking a screenshot of a project you're
+        proud of to display, you likely already have an image that's unnecessarily big.
+    </p>
+    <p>
+        Your image size also depends on how large your image will be on your website itself. If you're displaying a the background image or an image
+        the width/height of the page, you'll likely need an image size in the range of thousands of pixels. From doing a bit of
+        experimenting, I've found that multiplying the image pixel width and height on the website by <b>x1.7</b> for the actual image width and height
+        does the trick in terms of balancing the size and the image clarity on the page.
+    </p>
+    <p>
+        This doesn't always work though. The images that I use on this site have hardcoded sizes - but this isn't always the case. Websites are designed
+        to be responsive to width and height changes - it's the reason why you're able to open this same site on mobile and not have the text formatting
+        completely break, or have to scroll left to right just to read this text through the whole width. However, this does also pose a problem for in
+        terms of image sizing and optimization.
     </p>
     <h2 class="subheading">The srcset attribute and placeholders</h2>
+    <p>
+        This is where <span class="code-snippet">srcset</span> comes in. <span class="code-snippet">srcset</span> is an optional property of the HTML
+        <span class="code-snippet">&lt;img&gt;</span> element that allows you to define multiple image sources depending on the webpage width and height.
+        Used with the <span class="code-snippet">sizes</span> property, you can specify which images you want to associate with which range of website
+        widths/heights.
+    </p>
+    <p>
+        This allows for your webpage to show the perfect image at any time - the right size for a good tradeoff between image size or load time and image
+        quality.
+    </p>
+    <p>
+        Inevitably, there might be a case where despite your optimizations your assets will still take a while to load. In scenarios like this,
+        placeholders are an elegant solution that let your audience know that there will be more for them to see if they wait a little longer.
+    </p>
     <h2 class="subheading">Use .webp or .avif</h2>
     <h2 class="subheading">Um, ok. So how do I actually do all of this?</h2>
     <h2 class="subheading">Understanding your build process</h2>

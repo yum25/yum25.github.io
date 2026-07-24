@@ -53,6 +53,14 @@ header {
   color: orange;
 }
 
+.code-snippet {
+  background: var(--var-primary-text-color-theme);
+  color: var(--var-primary-color-theme);
+  padding: 1px 5px 2px 5px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
 .blog-aside-container {
   display: grid;
   grid-auto-flow: column;
