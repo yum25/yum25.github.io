@@ -17,6 +17,10 @@ nav {
   max-width: 600px;
 }
 
+.metadata {
+  max-width: 600px;
+}
+
 main {
   max-width: 600px;
   line-height: 1.6;

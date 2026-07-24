@@ -13,6 +13,10 @@
             <span>console.blog</span>
             <span>//</span>
             <time>{{ article.date }}</time>
+            <span>//</span>
+            {% if article.edited %}
+                edited on <time>{{ article.edited }}</time>
+            {% endif %}
         </small>
     </section>
     <main>
